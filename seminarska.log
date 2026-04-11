@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  11 APR 2026 20:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  11 APR 2026 21:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1267,15 +1267,20 @@ Package biblatex Info: ... file 'seminarska.bbl' found.
  (seminarska.bbl)
 Package biblatex Info: Reference section=0 on input line 83.
 Package biblatex Info: Reference segment=0 on input line 83.
+<logo.png, id=154, 542.025pt x 69.25874pt>
+File: logo.png Graphic file (type png)
+<use logo.png>
+Package pdftex.def Info: logo.png  used on input line 88.
+(pdftex.def)             Requested size: 364.19667pt x 46.53731pt.
  [1
 
 {C:/Users/Jaka/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Jaka/
-AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
+AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo.png>]
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-
 english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 119.
- [3] (seminarska.toc
+(babel)             from babel-en.ini. Reported on input line 115.
+ [2] (seminarska.toc
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
@@ -1307,72 +1312,72 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-[4])
+[3])
 \tf@toc=\write6
 \openout6 = `seminarska.toc'.
 
- [5] [6] [7]
-Overfull \hbox (41.07587pt too wide) in paragraph at lines 210--211
+ [4] [5] [6]
+Overfull \hbox (41.07587pt too wide) in paragraph at lines 206--207
 \OT1/ptm/m/n/12 (-20) od od-je-malca, jo po-sre-duje cilj-nemu API-ju, doda ust
 re-zne glave \OT1/pcr/m/n/12 Access-Control-Allow-Origin
  []
 
 
-Overfull \hbox (49.09206pt too wide) in paragraph at lines 212--213
+Overfull \hbox (49.09206pt too wide) in paragraph at lines 208--209
 []\OT1/ptm/m/n/12 (-20) Funkcije so im-ple-men-ti-rane v dveh iz-va-jal-nih oko
 -ljih (run-time). Ne-ka-tere, na pri-mer \OT1/pcr/m/n/12 lpp-arrivals.js\OT1/pt
 m/m/n/12 (-20) ,
  []
 
-[8]
+[7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 252.
- [9]
-Overfull \hbox (73.33907pt too wide) in paragraph at lines 283--284
+nput line 248.
+ [8]
+Overfull \hbox (73.33907pt too wide) in paragraph at lines 279--280
 \OT1/pcr/m/n/12 trip[]id\OT1/ptm/m/n/12 (-20) . IJPP API vra[]ca objekte v drug
 a[]cni struk-turi z gnez-de-nimi po-lji, kot so \OT1/pcr/m/n/12 vehicle.operato
 r[]name\OT1/ptm/m/n/12 (-20) ,
  []
 
 
-Overfull \hbox (29.80167pt too wide) in paragraph at lines 306--307
+Overfull \hbox (29.80167pt too wide) in paragraph at lines 302--303
 []\OT1/ptm/m/n/12 (-20) Animacijska zanka v kom-po-nenti \OT1/pcr/m/n/12 App \O
 T1/ptm/m/n/12 (-20) te[]ce s fre-kvenco 1 Hz z API-jem \OT1/pcr/m/n/12 requestA
 nimationFrame\OT1/ptm/m/n/12 (-20) .
  []
 
-[10] [11]
-Overfull \hbox (2.70532pt too wide) in paragraph at lines 362--363
+[9] [10]
+Overfull \hbox (2.70532pt too wide) in paragraph at lines 358--359
 \OT1/ptm/m/n/12 (-20) Frekvenca pri-do-bi-va-nja po-dat-kov o polo[]zajih av-to
 -bu-sov je di-nami[]cno pri-la-go-jena sto-pnji pove[]cave
  []
 
-[12] [13]
+[11] [12]
 LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 4
-47.
+43.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 447.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 443.
 
-Overfull \hbox (30.57594pt too wide) in paragraph at lines 453--454
+Overfull \hbox (30.57594pt too wide) in paragraph at lines 449--450
 \OT1/ptm/m/n/12 (-20) rajo iz-hod v eno-tno in-terno obliko. Vse tri funk-cije 
 (\OT1/pcr/m/n/12 fetchLppArrivals\OT1/ptm/m/n/12 (-20) , \OT1/pcr/m/n/12 fetchI
 jppArrivals\OT1/ptm/m/n/12 (-20) ,
  []
 
 
-Overfull \hbox (9.90694pt too wide) in paragraph at lines 453--454
+Overfull \hbox (9.90694pt too wide) in paragraph at lines 449--450
 \OT1/pcr/m/n/12 fetchSzArrivals\OT1/ptm/m/n/12 (-20) ) na iz-hodu vr-nejo ta-be
 lo objek-tov z is-tim na-bo-rom la-stno-sti: \OT1/pcr/m/n/12 etaMinutes\OT1/ptm
 /m/n/12 (-20) ,
  []
 
-[14]
+[13]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 4
-69.
+65.
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
@@ -1381,25 +1386,25 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (124.95016pt too wide) in paragraph at lines 475--476
+Overfull \hbox (124.95016pt too wide) in paragraph at lines 471--472
 []\OT1/ptm/m/n/12 (-20) Namesto shra-njene kon-stante se pri vsa-kem klicu \OT1
 /pcr/m/n/12 fetchTrainPositions() \OT1/ptm/m/n/12 (-20) po-kli[]ce \OT1/pcr/m/n
 /12 buildSzLocationsLink()\OT1/ptm/m/n/12 (-20) ,
  []
 
 
-Overfull \hbox (10.82097pt too wide) in paragraph at lines 475--476
+Overfull \hbox (10.82097pt too wide) in paragraph at lines 471--472
 \OT1/ptm/m/n/12 (-20) ki vrne URL z vre-dnostmi, ki sta glede na tre-nu-tni []c
 as pra-vilni. Funk-cija \OT1/pcr/m/n/12 encodeURIComponent
  []
 
-[15]
+[14]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-07.
+03.
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[16] [17] [18] [19] (seminarska.aux)
+[15] [16] [17] [18] (seminarska.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
@@ -1411,10 +1416,10 @@ Package logreq Info: Writing requests to 'seminarska.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36393 strings out of 467866
- 677590 string characters out of 5418797
- 1739439 words of memory out of 5000000
- 64360 multiletter control sequences out of 15000+600000
+ 36399 strings out of 467866
+ 677687 string characters out of 5418797
+ 1739436 words of memory out of 5000000
+ 64367 multiletter control sequences out of 15000+600000
  657877 words of font info for 218 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,9n,95p,1045b,2142s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1427,9 +1432,9 @@ pe1/urw/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/t
 ype1/urw/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/typ
 e1/urw/times/utmri8a.pfb>
-Output written on seminarska.pdf (19 pages, 214437 bytes).
+Output written on seminarska.pdf (18 pages, 249895 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
- 171 named destinations out of 1000 (max. 500000)
- 47413 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 488 PDF objects out of 1000 (max. 8388607)
+ 170 named destinations out of 1000 (max. 500000)
+ 47418 words of extra memory for PDF output out of 51595 (max. 10000000)
 
