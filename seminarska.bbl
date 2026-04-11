@@ -1,0 +1,383 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{restapi}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=87dbbd44b3977c28b71d826a931add3e}{%
+           family={Fielding},
+           familyi={F\bibinitperiod},
+           given={Roy\bibnamedelima Thomas},
+           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {University of California, Irvine}%
+      }
+      \strng{namehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{fullhash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{fullhashraw}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{bibnamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorbibnamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authornamehash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorfullhash}{87dbbd44b3977c28b71d826a931add3e}
+      \strng{authorfullhashraw}{87dbbd44b3977c28b71d826a931add3e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Architectural Styles and the Design of Network-based Software Architectures}
+      \field{year}{2000}
+      \verb{urlraw}
+      \verb https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
+      \endverb
+      \verb{url}
+      \verb https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
+      \endverb
+    \endentry
+    \entry{polyline}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b568e72d25af32b0cec03e49cbf3f70}{%
+           family={{Google LLC}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{fullhash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{fullhashraw}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{bibnamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorbibnamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authornamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorfullhash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorfullhashraw}{7b568e72d25af32b0cec03e49cbf3f70}
+      \field{extraname}{1}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Encoded Polyline Algorithm Format}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://developers.google.com/maps/documentation/utilities/polylinealgorithm
+      \endverb
+      \verb{url}
+      \verb https://developers.google.com/maps/documentation/utilities/polylinealgorithm
+      \endverb
+    \endentry
+    \entry{gtfs}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7b568e72d25af32b0cec03e49cbf3f70}{%
+           family={{Google LLC}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{fullhash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{fullhashraw}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{bibnamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorbibnamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authornamehash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorfullhash}{7b568e72d25af32b0cec03e49cbf3f70}
+      \strng{authorfullhashraw}{7b568e72d25af32b0cec03e49cbf3f70}
+      \field{extraname}{2}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{General Transit Feed Specification Reference}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://gtfs.org/documentation/schedule/reference/
+      \endverb
+      \verb{url}
+      \verb https://gtfs.org/documentation/schedule/reference/
+      \endverb
+    \endentry
+    \entry{lppapp}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=21cad33495b790e6500a0b975139ff76}{%
+           family={{Javno podjetje Ljubljanski potniški promet d.o.o.}},
+           familyi={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{21cad33495b790e6500a0b975139ff76}
+      \strng{fullhash}{21cad33495b790e6500a0b975139ff76}
+      \strng{fullhashraw}{21cad33495b790e6500a0b975139ff76}
+      \strng{bibnamehash}{21cad33495b790e6500a0b975139ff76}
+      \strng{authorbibnamehash}{21cad33495b790e6500a0b975139ff76}
+      \strng{authornamehash}{21cad33495b790e6500a0b975139ff76}
+      \strng{authorfullhash}{21cad33495b790e6500a0b975139ff76}
+      \strng{authorfullhashraw}{21cad33495b790e6500a0b975139ff76}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{LPP Ljubljana -- uradna aplikacija}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.lpp.si/
+      \endverb
+      \verb{url}
+      \verb https://www.lpp.si/
+      \endverb
+    \endentry
+    \entry{maplibre}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e4200c8d1b69a674ac336262f4e8b0d1}{%
+           family={{MapLibre Contributors}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{fullhash}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{fullhashraw}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{bibnamehash}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{authorbibnamehash}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{authornamehash}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{authorfullhash}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \strng{authorfullhashraw}{e4200c8d1b69a674ac336262f4e8b0d1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{MapLibre GL JS}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://maplibre.org/maplibre-gl-js/docs/
+      \endverb
+      \verb{url}
+      \verb https://maplibre.org/maplibre-gl-js/docs/
+      \endverb
+    \endentry
+    \entry{react}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=6c56f762d9ebe73063cd2d157e97351f}{%
+           family={{Meta Open Source}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{fullhash}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{fullhashraw}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{bibnamehash}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{authorbibnamehash}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{authornamehash}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{authorfullhash}{6c56f762d9ebe73063cd2d157e97351f}
+      \strng{authorfullhashraw}{6c56f762d9ebe73063cd2d157e97351f}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{React -- A JavaScript library for building user interfaces}
+      \field{year}{2024}
+      \true{nocite}
+      \verb{urlraw}
+      \verb https://react.dev/
+      \endverb
+      \verb{url}
+      \verb https://react.dev/
+      \endverb
+    \endentry
+    \entry{ijppweb}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=8ef0cb8c38bf91947a678b9232d05ffb}{%
+           family={{Ministrstvo za infrastrukturo RS}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{fullhash}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{fullhashraw}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{bibnamehash}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{authorbibnamehash}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{authornamehash}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{authorfullhash}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \strng{authorfullhashraw}{8ef0cb8c38bf91947a678b9232d05ffb}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Integralni javni potniški promet}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.ijpp.si/
+      \endverb
+      \verb{url}
+      \verb https://www.ijpp.si/
+      \endverb
+    \endentry
+    \entry{cors}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=24707b006eaf5e53e63d51d5c8c867f9}{%
+           family={{Mozilla Foundation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{fullhash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{fullhashraw}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{bibnamehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authorbibnamehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authornamehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authorfullhash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authorfullhashraw}{24707b006eaf5e53e63d51d5c8c867f9}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Cross-Origin Resource Sharing (CORS)}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+      \endverb
+    \endentry
+    \entry{pwa}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=24707b006eaf5e53e63d51d5c8c867f9}{%
+           family={{Mozilla Foundation}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{fullhash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{fullhashraw}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{bibnamehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authorbibnamehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authornamehash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authorfullhash}{24707b006eaf5e53e63d51d5c8c867f9}
+      \strng{authorfullhashraw}{24707b006eaf5e53e63d51d5c8c867f9}
+      \field{extraname}{2}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Progressive Web Apps}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+      \endverb
+      \verb{url}
+      \verb https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
+      \endverb
+    \endentry
+    \entry{motis}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=8eac8673dd212c48086063910b066647}{%
+           family={Pfeiffer},
+           familyi={P\bibinitperiod},
+           given={Felix},
+           giveni={F\bibinitperiod}}}%
+        {{hash=64646334366fb17557c2cea2ba6decdb}{%
+           family={Lenz},
+           familyi={L\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{c235ade90c2b48b81144dac1f660ccae}
+      \strng{fullhash}{cd491756b5f0c1cdf29da2beb715868b}
+      \strng{fullhashraw}{cd491756b5f0c1cdf29da2beb715868b}
+      \strng{bibnamehash}{cd491756b5f0c1cdf29da2beb715868b}
+      \strng{authorbibnamehash}{cd491756b5f0c1cdf29da2beb715868b}
+      \strng{authornamehash}{c235ade90c2b48b81144dac1f660ccae}
+      \strng{authorfullhash}{cd491756b5f0c1cdf29da2beb715868b}
+      \strng{authorfullhashraw}{cd491756b5f0c1cdf29da2beb715868b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{MOTIS: Multi-modal Travel Information System}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://motis-project.de/
+      \endverb
+      \verb{url}
+      \verb https://motis-project.de/
+      \endverb
+    \endentry
+    \entry{szweb}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=e8af8fdc7fc143e02f2bd35725d98791}{%
+           family={{Slovenske železnice d.o.o.}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{fullhash}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{fullhashraw}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{bibnamehash}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{authorbibnamehash}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{authornamehash}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{authorfullhash}{e8af8fdc7fc143e02f2bd35725d98791}
+      \strng{authorfullhashraw}{e8af8fdc7fc143e02f2bd35725d98791}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Slovenske železnice -- red vožnje}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.sz.si/
+      \endverb
+      \verb{url}
+      \verb https://www.sz.si/
+      \endverb
+    \endentry
+    \entry{vite}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=c181205d8e6010f589e6c498afe0fe11}{%
+           family={You},
+           familyi={Y\bibinitperiod},
+           given={Evan},
+           giveni={E\bibinitperiod}}}%
+        {{hash=da8d88ece546832ef85a3e2a2d0fa09e}{%
+           family={{Vite Contributors}},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{32a431afff99dc16bcd499db88725738}
+      \strng{fullhash}{36ce3903e54aec753443ad8d5d33d331}
+      \strng{fullhashraw}{36ce3903e54aec753443ad8d5d33d331}
+      \strng{bibnamehash}{36ce3903e54aec753443ad8d5d33d331}
+      \strng{authorbibnamehash}{36ce3903e54aec753443ad8d5d33d331}
+      \strng{authornamehash}{32a431afff99dc16bcd499db88725738}
+      \strng{authorfullhash}{36ce3903e54aec753443ad8d5d33d331}
+      \strng{authorfullhashraw}{36ce3903e54aec753443ad8d5d33d331}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Vite -- Next Generation Frontend Tooling}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://vitejs.dev/
+      \endverb
+      \verb{url}
+      \verb https://vitejs.dev/
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

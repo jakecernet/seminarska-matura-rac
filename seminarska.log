@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.4.11)  11 APR 2026 20:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  11 APR 2026 20:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **./seminarska.tex
 (seminarska.tex
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
+L3 programming layer <2026-01-19>
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
@@ -56,23 +56,23 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@posthook=\toks20
 )
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2025/12/11 v25.17 The multilingual framework for LuaLaTeX, pdfLa
-TeX and XeLaTeX
+Package: babel 2026/03/24 v26.5 The multilingual framework for LuaLaTeX, pdfLaT
+eX and XeLaTeX
 \babel@savecnt=\count286
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2068.
+ne 2078.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2070.
+ne 2080.
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2072.
+e 2082.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2073.
+e 2083.
 LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2074.
+on input line 2084.
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2076.
+on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2101.
+on input line 2111.
 \U@D=\dimen157
 \l@unhyphenated=\language79
 
@@ -81,7 +81,7 @@ on input line 2101.
 \bbl@dirlevel=\count287
 Package babel Info: Configuration files are deprecated, as
 (babel)             they can break document portability.
-(babel)             Reported on input line 4196.
+(babel)             Reported on input line 4206.
 
 *************************************
 * Local config file bblopts.cfg used
@@ -97,7 +97,7 @@ Package babel Info: Name 'slovene' is discouraged.
 (babel)             Reported on input line 16.
 )
 Package babel Info: Importing font and identification data for slovene
-(babel)             from babel-sl.ini. Reported on input line 4320.
+(babel)             from babel-sl.ini. Reported on input line 4330.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/babel-slovenian\slovenia
 n.ldf
@@ -105,7 +105,7 @@ Language: slovenian 2025/05/10 v1.2p Slovenian support from the babel system
 Package babel Info: Making " an active character on input line 80.
 ))
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hyperref.sty
-Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
+Package: hyperref 2026-01-29 v7.01p Hypertext links for LaTeX
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -135,7 +135,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )) (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/hycolor\hycolor.sty
 Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ) (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
-Package: nameref 2025-06-21 v2.57 Cross-referencing by name of section
+Package: nameref 2026-01-29 v2.58 Cross-referencing by name of section
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/refcount\refcount.sty
 Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
@@ -161,7 +161,7 @@ Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 \Hy@linkcounter=\count290
 \Hy@pagecounter=\count291
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
-File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2026-01-29 v7.01p Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
 )
@@ -171,26 +171,26 @@ Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 \Hy@SavedSpaceFactor=\count292
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\puenc.def
-File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2026-01-29 v7.01p Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `pdfusetitle' set `true' on input line 4066.
-Package hyperref Info: Option `unicode' set `true' on input line 4066.
-Package hyperref Info: Hyper figures OFF on input line 4195.
-Package hyperref Info: Link nesting OFF on input line 4200.
-Package hyperref Info: Hyper index ON on input line 4203.
-Package hyperref Info: Plain pages OFF on input line 4210.
-Package hyperref Info: Backreferencing OFF on input line 4215.
+Package hyperref Info: Option `pdfusetitle' set `true' on input line 4072.
+Package hyperref Info: Option `unicode' set `true' on input line 4072.
+Package hyperref Info: Hyper figures OFF on input line 4201.
+Package hyperref Info: Link nesting OFF on input line 4206.
+Package hyperref Info: Hyper index ON on input line 4209.
+Package hyperref Info: Plain pages OFF on input line 4216.
+Package hyperref Info: Backreferencing OFF on input line 4221.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4462.
+Package hyperref Info: Bookmarks ON on input line 4468.
 \c@Hy@tempcnt=\count293
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4801.
+LaTeX Info: Redefining \url on input line 4807.
 \XeTeXLinkMargin=\dimen159
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
@@ -204,13 +204,13 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 \Fld@menulength=\count294
 \Field@Width=\dimen160
 \Fld@charsize=\dimen161
-Package hyperref Info: Hyper figures OFF on input line 6078.
-Package hyperref Info: Link nesting OFF on input line 6083.
-Package hyperref Info: Hyper index ON on input line 6086.
-Package hyperref Info: backreferencing OFF on input line 6093.
-Package hyperref Info: Link coloring OFF on input line 6098.
-Package hyperref Info: Link coloring with OCG OFF on input line 6103.
-Package hyperref Info: PDF/A mode OFF on input line 6108.
+Package hyperref Info: Hyper figures OFF on input line 6084.
+Package hyperref Info: Link nesting OFF on input line 6089.
+Package hyperref Info: Hyper index ON on input line 6092.
+Package hyperref Info: backreferencing OFF on input line 6099.
+Package hyperref Info: Link coloring OFF on input line 6104.
+Package hyperref Info: Link coloring with OCG OFF on input line 6109.
+Package hyperref Info: PDF/A mode OFF on input line 6114.
 \Hy@abspage=\count295
 \c@Item=\count296
 \c@Hfootnote=\count297
@@ -218,7 +218,7 @@ Package hyperref Info: PDF/A mode OFF on input line 6108.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\hpdftex.def
-File: hpdftex.def 2025-07-12 v7.01o Hyperref driver for pdfTeX
+File: hpdftex.def 2026-01-29 v7.01p Hyperref driver for pdfTeX
 \Fld@listcount=\count298
 \c@bookmark@seq@number=\count299
 
@@ -1098,7 +1098,7 @@ Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Document encoding is UTF8 ....
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
-Package: expl3 2025-12-24 L3 programming layer (loader) 
+Package: expl3 2026-01-19 L3 programming layer (loader) 
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
@@ -1106,7 +1106,7 @@ File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count503
 ))
 Package biblatex Info: ... and expl3
-(biblatex)             2025-12-24 L3 programming layer (loader) 
+(biblatex)             2026-01-19 L3 programming layer (loader) 
 (biblatex)             is new enough (at least 2020/04/06),
 (biblatex)             setting 'casechanger=expl3'.
 
@@ -1132,7 +1132,10 @@ LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-No file seminarska.aux.
+(seminarska.aux
+Package babel Info: 'slovene' activates 'slovene' shorthands.
+(babel)             Reported on input line 9.
+)
 \openout1 = `seminarska.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
@@ -1153,6 +1156,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1187,9 +1191,8 @@ LaTeX Font Info:    ... okay on input line 83.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package babel Info: 'slovene' activates 'slovene' shorthands.
-(babel)             Reported on input line 83.
 Package hyperref Info: Link coloring OFF on input line 83.
+(seminarska.out) (seminarska.out)
 \@outlinefile=\write5
 \openout5 = `seminarska.out'.
 
@@ -1210,6 +1213,7 @@ Package microtype Info: Patching command `\showhyphens'.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
+
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
@@ -1247,18 +1251,23 @@ Package biblatex Info: ... file 'slovene.lbx' found.
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\slovene.lbx
 File: slovene.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+File: english.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 \openout4 = `seminarska.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'seminarska.bbl' not found.
-
-No file seminarska.bbl.
+Package biblatex Info: ... file 'seminarska.bbl' found.
+ (seminarska.bbl)
 Package biblatex Info: Reference section=0 on input line 83.
 Package biblatex Info: Reference segment=0 on input line 83.
-[1
+ [1
 
 {C:/Users/Jaka/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/Jaka/
 AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
@@ -1266,44 +1275,31 @@ AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}] [2]
 english.tex)
 Package babel Info: Importing data for english
 (babel)             from babel-en.ini. Reported on input line 119.
+ [3] (seminarska.toc
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
 
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 
-Package biblatex Warning: No localisation for language 'english' loaded.
-(biblatex)                Please rerun LaTeX to ensure languages can
-(biblatex)                be requested properly.
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 1
+2.
 
-[3]
-No file seminarska.toc.
-\tf@toc=\write6
-\openout6 = `seminarska.toc'.
-
-[4]
-
-LaTeX Warning: Citation 'gtfs' on page 5 undefined on input line 145.
-
-
-LaTeX Warning: Citation 'lppapp' on page 5 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'ijppweb' on page 5 undefined on input line 149.
-
-
-LaTeX Warning: Citation 'szweb' on page 5 undefined on input line 149.
-
-[5]
-
-LaTeX Warning: Citation 'restapi' on page 6 undefined on input line 155.
-
-
-LaTeX Warning: Citation 'cors' on page 6 undefined on input line 155.
-
-
-LaTeX Warning: Reference `fig:arch' on page 6 undefined on input line 163.
-
-[6]
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 2
-04.
- (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1311,6 +1307,11 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
+[4])
+\tf@toc=\write6
+\openout6 = `seminarska.toc'.
+
+ [5] [6] [7]
 Overfull \hbox (41.07587pt too wide) in paragraph at lines 210--211
 \OT1/ptm/m/n/12 (-20) od od-je-malca, jo po-sre-duje cilj-nemu API-ju, doda ust
 re-zne glave \OT1/pcr/m/n/12 Access-Control-Allow-Origin
@@ -1323,31 +1324,10 @@ Overfull \hbox (49.09206pt too wide) in paragraph at lines 212--213
 m/m/n/12 (-20) ,
  []
 
-[7] (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 233
-.
- (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 233
-.
-
-(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
+[8]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
 nput line 252.
-
-[8]
+ [9]
 Overfull \hbox (73.33907pt too wide) in paragraph at lines 283--284
 \OT1/pcr/m/n/12 trip[]id\OT1/ptm/m/n/12 (-20) . IJPP API vra[]ca objekte v drug
 a[]cni struk-turi z gnez-de-nimi po-lji, kot so \OT1/pcr/m/n/12 vehicle.operato
@@ -1361,17 +1341,13 @@ T1/ptm/m/n/12 (-20) te[]ce s fre-kvenco 1 Hz z API-jem \OT1/pcr/m/n/12 requestA
 nimationFrame\OT1/ptm/m/n/12 (-20) .
  []
 
-[9]
-
-LaTeX Warning: Citation 'maplibre' on page 10 undefined on input line 327.
-
-[10]
+[10] [11]
 Overfull \hbox (2.70532pt too wide) in paragraph at lines 362--363
 \OT1/ptm/m/n/12 (-20) Frekvenca pri-do-bi-va-nja po-dat-kov o polo[]zajih av-to
 -bu-sov je di-nami[]cno pri-la-go-jena sto-pnji pove[]cave
  []
 
-[11] [12]
+[12] [13]
 LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 4
 47.
 
@@ -1380,10 +1356,6 @@ File: omspcr.fd
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 447.
-
-
-LaTeX Warning: Citation 'motis' on page 13 undefined on input line 451.
-
 
 Overfull \hbox (30.57594pt too wide) in paragraph at lines 453--454
 \OT1/ptm/m/n/12 (-20) rajo iz-hod v eno-tno in-terno obliko. Vse tri funk-cije 
@@ -1398,7 +1370,7 @@ lo objek-tov z is-tim na-bo-rom la-stno-sti: \OT1/pcr/m/n/12 etaMinutes\OT1/ptm
 /m/n/12 (-20) ,
  []
 
-[13]
+[14]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 4
 69.
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
@@ -1421,73 +1393,43 @@ Overfull \hbox (10.82097pt too wide) in paragraph at lines 475--476
 as pra-vilni. Funk-cija \OT1/pcr/m/n/12 encodeURIComponent
  []
 
-
-LaTeX Warning: Citation 'polyline' on page 14 undefined on input line 481.
-
-
-LaTeX Warning: Citation 'vite' on page 14 undefined on input line 503.
-
-[14]
-
-LaTeX Warning: Citation 'pwa' on page 15 undefined on input line 507.
-
+[15]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
 07.
-(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
+ (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-[15] [16]
-
-LaTeX Warning: Empty bibliography on input line 530.
-
-[17] [18] (seminarska.aux)
+[16] [17] [18] [19] (seminarska.aux)
  ***********
 LaTeX2e <2025-11-01>
-L3 programming layer <2025-12-24>
+L3 programming layer <2026-01-19>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `seminarska.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `seminarska.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  4D55358C3A5389EBE60ABBC9DE87FE55;7145.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                seminarska
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `seminarska.out' has not changed.
+(rerunfilecheck)             Checksum: 4D55358C3A5389EBE60ABBC9DE87FE55;7145.
 Package logreq Info: Writing requests to 'seminarska.run.xml'.
 \openout1 = `seminarska.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36199 strings out of 467870
- 673262 string characters out of 5418839
- 1719693 words of memory out of 5000000
- 64218 multiletter control sequences out of 15000+600000
- 654695 words of font info for 195 fonts, out of 8000000 for 9000
+ 36393 strings out of 467866
+ 677590 string characters out of 5418797
+ 1739439 words of memory out of 5000000
+ 64360 multiletter control sequences out of 15000+600000
+ 657877 words of font info for 218 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,9n,95p,1045b,2142s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mmi12.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
-courier/ucrb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on seminarska.pdf (18 pages, 170436 bytes).
+nts/cm/cmsy10.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/urw/courier/ucrb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/urw/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/urw/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/urw/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/typ
+e1/urw/times/utmri8a.pfb>
+Output written on seminarska.pdf (19 pages, 214437 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 158 named destinations out of 1000 (max. 500000)
- 42509 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 171 named destinations out of 1000 (max. 500000)
+ 47413 words of extra memory for PDF output out of 51595 (max. 10000000)
 

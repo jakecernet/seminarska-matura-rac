@@ -1,0 +1,14 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'seminarska.blg'
+[195] biber-MSWIN64:342> INFO - === 
+[266] Biber.pm:421> INFO - Reading 'seminarska.bcf'
+[481] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[513] Biber.pm:4487> INFO - Processing section 0
+[537] Biber.pm:4678> INFO - Looking for bibtex file 'viri.bib' for section 0
+[652] bibtex.pm:1713> INFO - LaTeX decoding ...
+[679] bibtex.pm:1519> INFO - Found BibTeX data source 'viri.bib'
+[818] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[818] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'variable = shifted' with 'variable = non-ignorable'
+[818] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'sl-SI'
+[852] bbl.pm:676> INFO - Writing 'seminarska.bbl' with encoding 'UTF-8'
+[861] bbl.pm:779> INFO - Output to seminarska.bbl
