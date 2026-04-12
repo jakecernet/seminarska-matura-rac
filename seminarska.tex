@@ -109,7 +109,7 @@ Seminarska naloga opisuje razvoj progresivne spletne aplikacije IJPP Tracker, na
 \vfill
 \section*{Abstract}
 \foreignlanguage{english}{%
-This paper describes the development of a progressive web application (PWA) called IJPP Tracker, designed for real-time tracking of public transport vehicles in the Republic of Slovenia. The application aggregates data from three independent systems — Ljubljana City Bus (LPP), Integral Public Transport (IJPP), and Slovenian Railways (SŽ) — and displays them on an interactive map. The paper covers the system architecture, the technologies used, and the key challenges encountered during development: mismatched station identifiers across subsystems, heterogeneous data interfaces, and the need for dynamically constructed API request URLs.
+This paper describes the development of a progressive web application (PWA) called IJPP Tracker, designed for real-time tracking of public transport vehicles in the Republic of Slovenia. The application aggregates data from three independent systems — Ljubljana City Bus (LPP), Integrated Public Transport (IJPP), and Slovenian Railways (SŽ) — and displays them on an interactive map. The paper covers the system architecture, the technologies used, and the key challenges encountered during development: mismatched station identifiers across subsystems, heterogeneous data interfaces, and the need for dynamically constructed API request URLs.
 
 \textbf{Keywords:} public transport, React, PWA, MapLibre GL, REST API, GTFS, LPP, IJPP, S\v{Z}
 }
@@ -122,39 +122,37 @@ This paper describes the development of a progressive web application (PWA) call
 \newpage
 \section{Uvod}
 
-Javni potniški promet v Republiki Sloveniji deluje v okviru večih med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Javno podjetje Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integralni javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
+Javni potniški promet v Republiki Sloveniji deluje v okviru večih med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Javno podjetje Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integrirani javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
 
-Kljub temu, da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi v realnem času preveriti, kdaj bo prispel naslednji mestni avtobus, medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila osnovna motivacija za razvoj aplikacije IJPP Tracker.
+Kljub temu, da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi v sproti preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
 
-Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App -- PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz vozil na interaktivnem zemljevidu v realnem času, iskanje postajališč, pregledovanje prihodov in sledenje posameznim linijam.
+Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App - PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz trenutnih lokacij vozil na interaktivnem zemljevidu, iskanje postajališč, pregledovanje prihodov in sledenje posameznim linijam.
 
-V nalogi so postavljene naslednje hipoteze: (1) sodobne spletne tehnologije omogočajo vzpostavitev zmogljive aplikacije za sledenje javnega potniškega prometa brez nativnega mobilnega razvoja; (2) razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z ustrezno abstrakcijsko plastjo na strani odjemalca; (3) omejitve, ki jih nalagajo varnostne politike brskalnikov (CORS), zahtevajo posredovalni strežniški sloj.
-
-Metodološki pristop vključuje analizo obstoječih API-jev in dokumentacije ter implementacijo prototipne aplikacije z vrednotenjem tehničnih rešitev. Naloga je strukturirana po načelu od splošnega k posebnemu: od pregleda področja in arhitekture sistema do podrobne razlage posameznih modulov in obravnave konkretnih tehničnih izzivov.
+V nalogi so postavljene naslednje hipoteze: (1) sodobne spletne tehnologije omogočajo vzpostavitev zmogljive aplikacije za sledenje javnega potniškega prometa brez nativnega mobilnega razvoja; (2) razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z ustrezno abstrakcijsko plastjo na strani odjemalca; (3) omejitve, ki jih prinesejo varnostne politike brskalnikov (CORS), zahtevajo posredovalni strežniški sloj.
 
 \section{Pregled področja}
 
 \subsection{Javni potniški promet v digitalnem okolju}
 
-Digitalizacija javnega potniškega prometa poteka na dveh ravneh. Na ravni zbiranja podatkov gre za nameščanje GPS-sprejemnikov in senzorjev v vozila, ki oddajajo položajne podatke v osrednji sistem. Na ravni distribucije gre za objavo teh podatkov prek standardiziranih vmesnikov, ki jih najenostavneje razumemo kot spletne naslove, na katere se poveže zunanji odjemalec in pridobi strukturirane podatke.
+Digitalizacija javnega potniškega prometa poteka na dveh ravneh. Na ravni zbiranja podatkov gre za nameščanje GPS-sprejemnikov in senzorjev v vozila, ki oddajajo podatke o položaju vozil v osrednji sistem. Na ravni distribucije gre za objavo teh podatkov prek standardiziranih vmesnikov, ki jih najenostavneje razumemo kot spletne naslove, na katere se poveže zunanji odjemalec in pridobi strukturirane podatke.
 
 Mednarodni standard za izmenjavo podatkov o javnem potniškem prometu je GTFS (General Transit Feed Specification), ki ga je prvotno razvil Google v sodelovanju s Portlandsko metropolitansko agencijo za transport \cite{gtfs}. Standard GTFS definira statične podatke (vozni redi, postajališča, linije), medtem ko razširitev GTFS-Realtime pokriva dinamične podatke (zamude, pozicije vozil, opozorila). Čeprav slovensko potniško omrežje v večji meri sledi tem standardom, posamezni sistemi implementirajo lastne razširitve in nestandardne vmesnike.
 
 \subsection{Obstoječe rešitve in njihove pomanjkljivosti}
 
-Na slovenskem trgu obstaja več delnih rešitev. Uradna aplikacija LPP Ljubljana \cite{lppapp} pokriva izključno mestne avtobuse v Ljubljani. Spletni portal IJPP \cite{ijppweb} nudi iskanje točke-do-točke za medkrajevne avtobuse, ni pa primeren za sledenje v realnem času. Portal SŽ \cite{szweb} omogoča vpogled v red vožnje in zamude vlakov, ne prikazuje pa položajev vlakov na zemljevidu.
+Na slovenskem trgu obstaja več delnih rešitev. Uradna aplikacija LPP Ljubljana \cite{lppapp} pokriva izključno mestne avtobuse v Ljubljani. Spletni portal BrezAvta \cite{ijppweb} nudi načrtovanje poti od točke do točke za medkrajevne avtobuse, ni pa primeren za spremlajanje trenutnih pozicij avtobusov. Portal SŽ \cite{szweb} omogoča vpogled v red vožnje, ne prikazuje pa položajev vlakov na zemljevidu.
 
-Skupna pomanjkljivost vseh navedenih rešitev je odsotnost enotnega pogleda, ki bi na enem mestu prikazoval vse oblike javnega prometa s skupnimi funkcijami iskanja in sledenja. Prav to vrzel zapolnjuje obravnavana aplikacija IJPP Tracker.
+Skupna pomanjkljivost vseh navedenih rešitev je odsotnost enotnega pogleda, ki bi na enem mestu prikazoval vse oblike javnega prometa s skupnimi funkcijami iskanja in sledenja. Prav to vrzel zapolnjuje aplikacija IJPP Tracker.
 
 \subsection{Tehnični standardi in protokoli}
 
-Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih konceptov. Prvi je REST API (Representational State Transfer Application Programming Interface), ki je arhitekturni slog za gradnjo spletnih vmesnikov, pri katerem odjemalec pošlje zahtevo HTTP na določen URL in prejme podatke v obliki JSON \cite{restapi}. Drugi je mehanizem CORS (Cross-Origin Resource Sharing), ki je varnostna politika brskalnikov, ki preprečuje, da bi skripta na enem spletnem naslovu neposredno dostopala do podatkov na drugem spletnem naslovu brez ustreznega dovoljenja strežnika \cite{cors}. Ker nekateri javni API-ji ne nastavljajo ustreznih glav CORS, aplikacija potrebuje posredovalni strežnik (proxy), ki zahteve posreduje v imenu odjemalca.
+Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih konceptov. Prvi je REST API (Representational State Transfer Application Programming Interface), ki je arhitekturni slog za gradnjo spletnih vmesnikov, pri katerem odjemalec pošlje zahtevo HTTP na določen URL in prejme podatke v obliki JSON \cite{restapi}. Drugi je mehanizem CORS (Cross-Origin Resource Sharing), varnostna politika brskalnikov, ki preprečuje, da bi skripta na enem spletnem naslovu neposredno dostopala do podatkov na drugem spletnem naslovu brez ustreznega dovoljenja strežnika \cite{cors}. Ker nekateri javni API-ji ne nastavljajo ustreznih glav CORS, aplikacija potrebuje posredovalni strežnik (proxy), ki zahteve posreduje v imenu odjemalca.
 
 \section{Arhitektura aplikacije}
 
 \subsection{Pregled arhitekturne zasnove}
 
-Aplikacija IJPP Tracker je zgrajena kot enostranska aplikacija (Single Page Application -- SPA) z dvonivojsko arhitekturo. Odjemalska stran je progresivna spletna aplikacija, razvita z ogrodjem React, ki teče neposredno v brskalniku. Strežniška stran je sestavljena iz brezstrežniških funkcij (serverless functions), ki so nameščene na platformi Vercel in delujejo izključno kot CORS-posredniki.
+Aplikacija IJPP Tracker je zgrajena kot enostranska aplikacija (Single Page Application -- SPA) z dvonivojsko arhitekturo. Odjemalska stran je progresivna spletna aplikacija, razvita z ogrodjem React, ki teče neposredno v brskalniku. Strežniška stran je sestavljena iz brezstrežniških funkcij (serverless functions), ki delujejo na platformi Vercel in delujejo izključno kot CORS-posredniki.
 
 Slika~\ref{fig:arch} prikazuje visokonivojski pogled na arhitekturo.
 
@@ -193,27 +191,29 @@ Slika~\ref{fig:arch} prikazuje visokonivojski pogled na arhitekturo.
 \label{fig:arch}
 \end{figure}
 
-Ločevanje odjemalske in strežniške plasti zagotavlja, da je vsa logika prikaza in obdelave podatkov na strani odjemalca, medtem ko strežniška plast služi zgolj kot posrednik pri zahtevah, ki jih brskalniki sicer blokirajo zaradi varnostnih politik CORS. Statični podatki, kot so seznami postaj, so shranjeni na platformi GitHub v obliki JSON datotek in jih aplikacija pridobi neposredno brez proxy posrednika, ker ta endpoint dovoljuje CORS dostop.
+Ločevanje odjemalske in strežniške plasti zagotavlja, da je vsa logika prikaza in obdelave podatkov na strani odjemalca, medtem ko strežniška plast služi zgolj kot posrednik pri zahtevah, ki jih brskalniki sicer blokirajo zaradi varnostnih politik CORS. Statični podatki, kot so seznami postaj in poti linij, so shranjeni na platformi GitHub v obliki JSON datotek in jih aplikacija pridobi neposredno brez proxy posrednika, saj ta endpoint dovoljuje CORS dostop.
 
-\subsection{Odjemalska stran -- React SPA}
+\subsection{Odjemalska stran - React SPA}
 
-Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (Zemljevid, Postaje, Linije, Nastavitve) zagotavlja knjižnica React Router z načinom zgoščenega naslova (hash routing), ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
+Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (zemljevid, postaje, linije,nastavitve) zagotavlja knjižnica React Router z načinom hash routing-a, ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
 
 Komponente zavihkov so naložene z leno inicializacijo (\texttt{React.lazy}), kar pomeni, da se koda posameznega zavihka prenese šele ob prvem obisku tega zavihka. S tem se skrajša čas do prve interaktivnosti aplikacije.
 
 \subsection{Strežniška plast -- Vercel brezstrežniške funkcije}
 
-Mapa \texttt{api/} vsebuje šest JavaScript datotek, ki se ob namestitvi na Vercel samodejno pretvorijo v HTTP-končne točke. Vsaka datoteka implementira vzorec CORS-posrednika: sprejme zahtevo od odjemalca, jo posreduje ciljnemu API-ju, doda ustrezne glave \texttt{Access-Control-Allow-Origin} in vrne odgovor odjemalcu.
+Mapa \texttt{api/} vsebuje šest JavaScript datotek, ki se ob namestitvi na Vercel samodejno pretvorijo v HTTP-končne točke. Vsaka datoteka implementira vzorec CORS-posrednika: sprejme zahtevo od odjemalca, jo posreduje ciljnemu API-ju, 
+doda ustrezne glave \texttt{Access-Control-Allow-Origin} in vrne odgovor odjemalcu.
 
-Funkcije so implementirane v dveh izvajalnih okoljih (runtime). Nekatere, na primer \texttt{lpp-arrivals.js}, so konfigurirane kot \texttt{runtime: "nodejs"}, ker vsebujejo logiko za ponovitev zahteve ob napaki in predpomnjenje. Druge, na primer \texttt{lpp-stops.js}, pa so konfigurirane kot \texttt{runtime: "edge"}, kar pomeni izvajanje v globalni mreži robnih vozlišč z nižjo latenco, a brez dostopa do polnega Node.js API-ja.
+Funkcije so implementirane v dveh izvajalnih okoljih (runtime). 
+Nekatere, na primer \texttt{lpp-arrivals.js}, so konfigurirane kot \texttt{runtime: "nodejs"}, ker vsebujejo logiko za ponovitev zahteve ob napaki in predpomnjenje. Druge, na primer \texttt{lpp-stops.js}, pa so konfigurirane kot \texttt{runtime: "edge"}, kar pomeni izvajanje v globalni mreži robnih vozlišč z nižjo latenco, a brez dostopa do polnega Node.js API-ja.
 
 \subsection{Upravljanje stanja aplikacije}
 
 Globalno stanje aplikacije je centralizirano v komponenti \texttt{App} in zajema: seznam postajališč (\texttt{busStops}, \texttt{szStops}), trenutne položaje vozil (\texttt{gpsPositions}, \texttt{trainPositions}), aktivno postajališče (\texttt{activeStation}), prihode za aktivno postajališče (\texttt{lppArrivals}, \texttt{ijppArrivals}, \texttt{szArrivals}), izbrano vozilo (\texttt{selectedVehicle}) in nastavitve vidnosti plasti na zemljevidu (\texttt{visibility}, \texttt{busOperators}).
 
-Trajnost stanja med sejami je zagotovljena s shranjevanjem v \texttt{localStorage} brskalnika, kjer se ob vsakem posodobitvi pišejo nastavitve teme, aktivno postajališče, nastavitve sloja karte in seznam priljubljenih postajališč.
+Trajnost stanja med sejami je zagotovljena s shranjevanjem v \texttt{localStorage} brskalnika, kjer se ob vsaki posodobitvi zapišejo nastavitve teme, aktivno postajališče, nastavitve na zemljevidu prikazanih slojev in seznam priljubljenih postajališč.
 
-\section{Podatkovni sloj -- modul \texttt{Api.jsx}}
+\section{Podatkovni sloj - modul \texttt{Api.jsx}}
 
 \subsection{Pregled modula}
 
@@ -231,56 +231,83 @@ Aplikacija implementira lastno dvoplastno shemo predpomnjenja, ki sledi različn
 \textbf{Tip podatkov} & \textbf{Veljavnost} & \textbf{Utemeljitev} \\
 \midrule
 Postajališča & 5 minut & Statični podatki, redko se spreminjajo \\
-Položaji vozil & 5 sekund & Podatki v realnem času \\
-Prihodi & 15 sekund & Posodabljanje napovedi \\
-Poti (routes) & 5 minut & Geometrija se ne spreminja med vožnjo \\
+Položaji vozil & 5 sekund & Sprotni podatki \\
+Prihodi & 15 sekund & Posodabljanje napovedi prihodov \\
+Poti (routes) & 5 minut & Geometrija poti se ne spreminja med vožnjo \\
 \bottomrule
 \end{tabular}
 \label{tab:cache}
 \end{table}
 
-Splošno predpomnjenje zagotavlja objekt \texttt{Map} z imenom \texttt{cache}, ki za vsak URL ali ključ hrani par (podatki, časovni žig). Ločen objekt \texttt{routeCache} skrbi za predpomnjenje geometrij in postajališč posameznih voženj. Objekt \texttt{routeInFlight} pa preprečuje podvajanje sočasnih zahtev za isto vožnjo -- če zahteva za dani \texttt{tripId} že poteka, nova zahteva vrne obstoječo obljubo (Promise) namesto da sproži novo HTTP zahtevo.
+Splošno predpomnjenje zagotavlja objekt \texttt{Map} z imenom \texttt{cache}, ki za vsak URL ali ključ hrani par (podatki, časovni žig). Ločen objekt \texttt{routeCache} skrbi za predpomnjenje geometrij in postajališč posameznih voženj. Objekt \texttt{routeInFlight} pa preprečuje podvajanje sočasnih zahtev za isto vožnjo - če zahteva za dani \texttt{tripId} že poteka, nova zahteva vrne obstoječo obljubo (Promise), namesto proženja nove HTTP zahteve.
 
 \subsection{Normalizacija prihodov}
 
-Trije podatkovni viri prihodov vračajo čase v različnih formatah: LPP API vrača minut do prihoda (\texttt{eta\_min}) kot celo število, IJPP API vrača sekunde od polnoči kot celo število, SŽ API pa vrača ISO 8601 časovne žige. Funkcija \texttt{computeEtaAndTime} normalizira vse tri formate v enoten par (minuty do prihoda, ura v formatu HH:mm):
+Trije podatkovni viri prihodov vračajo čase v različnih formatah: LPP API vrača koliko minut je še do prihoda (\texttt{eta\_min}), IJPP API vrača sekunde od polnoči, SŽ API pa vrača ISO 8601 časovne žige. Funkcija \texttt{computeEtaAndTime} normalizira vse tri formate v enoten par (minute do prihoda, ura v formatu HH:mm):
 
 \begin{lstlisting}[caption={Normalizacija ETA iz različnih formatov}, label={lst:eta}]
 function computeEtaAndTime(arrival) {
-  let etaMin = arrival.etaMinutes ?? arrival.eta_min ?? undefined;
-  let actualTime =
-    arrival.realtimeDeparture || arrival.actualDeparture ||
-    arrival.scheduledDeparture || arrival.estimated_arrival_time ||
-    arrival.arrival_time || arrival.realtimeArrival ||
-    arrival.scheduledArrival;
+	let etaMin = arrival.etaMinutes ?? arrival.eta_min ?? undefined;
+	let actualTime =
+		arrival.realtimeDeparture ||
+		arrival.actualDeparture ||
+		arrival.scheduledDeparture ||
+		arrival.estimated_arrival_time ||
+		arrival.arrival_time ||
+		arrival.realtimeArrival ||
+		arrival.scheduledArrival;
 
-  // Ce je casovni niz brez datuma (HH:MM), dodamo danasnji datum
-  if (isNaN(actualDate?.getTime()) && actualTime?.match(/^\d{2}:\d{2}/)) {
-    const today = new Date().toISOString().split("T")[0];
-    actualDate = new Date(today + "T" + actualTime);
-  }
+	let actualDate = null;
+	if (actualTime) {
+		actualDate = new Date(actualTime);
+		// If parsing failed or if it looks like a time-only string, try prepending today's date
+		if (
+			isNaN(actualDate.getTime()) &&
+			typeof actualTime === "string" &&
+			actualTime.match(/^\d{2}:\d{2}(:\d{2})?$/)
+		) {
+			const today = new Date().toISOString().split("T")[0];
+			actualDate = new Date(`${today}T${actualTime}`);
+		}
+	}
+	if (actualDate && isNaN(actualDate.getTime())) {
+		actualDate = null;
+	}
 
-  // Generiramo ETA iz absolutnega casa ali obratno
-  if (etaMin === undefined && actualDate) {
-    etaMin = Math.max(0, Math.round(
-      (actualDate.getTime() - Date.now()) / 60000
-    ));
-  }
-  return { etaMinutes: etaMin, arrivalTime: formatTime(actualDate) };
-}
+	// Generate ETA if missing
+	if (etaMin === undefined && actualDate) {
+		const now = new Date();
+		etaMin = Math.max(
+			0,
+			Math.round((actualDate.getTime() - now.getTime()) / 60000),
+		);
+	}
+
+	// Generate actual time if missing
+	if (!actualDate && etaMin !== undefined) {
+		actualDate = new Date(new Date().getTime() + etaMin * 60000);
+	}
+
+	const timeStr = actualDate ? formatTime(actualDate) : "N/A";
+	return {
+		etaMinutes: etaMin ?? undefined,
+		arrivalTime: timeStr,
+	};
+};
+
 \end{lstlisting}
 
-Funkcija \texttt{seconds2time} pretvori sekunde od polnoči v niz \texttt{HH:MM:SS}, kar je potrebno za obdelavo odgovorov IJPP API-ja, ki čase dostavlja v tej obliki.
+Funkcija \texttt{seconds2time} pretvori sekunde od polnoči v niz \texttt{HH:MM:SS}, kar je potrebno za obdelavo odgovorov IJPP API-ja, ki čase vrača v tej obliki.
 
 \subsection{Pridobivanje položajev vozil}
 
 Aplikacija sočasno pridobiva položaje mestnih avtobusov LPP in medkrajevnih avtobusov IJPP z vzporednimi klici prek \texttt{Promise.all}. Oba seznama se nato združita v enoten niz, ki se posreduje komponentam za prikaz.
 
-LPP API vrača objekte z lastnostmi, kot so \texttt{latitude}, \texttt{longitude}, \texttt{line\_number} in \texttt{trip\_id}. IJPP API vrača objekte v drugačni strukturi z gnezdenimi polji, kot so \texttt{vehicle.operator\_name}, \texttt{trip\_headsign} in \texttt{stop.name}. Obe strukturi se v funkcijah \texttt{fetchLPPPositions} in \texttt{fetchIJPPPositions} prevedeta v enoten interni format z lastnostmi \texttt{gpsLocation}, \texttt{operator}, \texttt{lineName} in \texttt{tripId}.
+LPP API vrača objekte z lastnostmi, kot so \texttt{latitude}, \texttt{longitude}, \texttt{line\_number} in \texttt{trip\_id}. IJPP API vrača objekte v drugačni strukturi z gnezdenimi polji, kot so \texttt{vehicle.operator\_name}, \texttt{trip\_headsign} in \texttt{stop.name}. Obe strukturi se v funkcijah \texttt{fetchLPPPositions} in \texttt{fetchIJPPPositions} prevedeta v enoten format z lastnostmi \texttt{gpsLocation}, \texttt{operator}, \texttt{lineName} in \texttt{tripId}.
 
-\subsection{Sledenje vlakom z interpolacijo položaja}
+\subsection{Sledenje vlakom z interpoliranjem položaja}
 
-Sledenje vlakom je tehnično zahtevnejše kot sledenje avtobusom, ker SŽ API ne oddaja položajev vlakov v realnem času s frekvenco, primerno za tekoče gibanje na karti. Rešitev temelji na predhodni izračunanji celotne poti vlaka s časovnimi žigi in naknadnem interpoliranju položaja na osnovi sistemskega časa.
+Sledenje vlakom je tehnično zahtevnejše kot sledenje avtobusom, saj SŽ API ne oddaja dejanskih položajev vlakov s frekvenco, primerno za tekoče gibanje na karti. Rešitev temelji na predhodnem računanju celotne poti vlaka s časovnimi žigi in naknadnim interpoliranju položaja na osnovi sistemskega časa.
 
 Funkcija \texttt{fetchTrainPositions} pridobi vse aktivne vlake v oknu 60 sekund. Vsak vlak vsebuje pot v kodirani obliki Polyline in čase odhoda ter prihoda. Iz teh podatkov se zgradi tabela točk z absolutnimi časovnimi žigi:
 

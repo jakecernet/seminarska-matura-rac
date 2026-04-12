@@ -1,14 +1,14 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'seminarska.blg'
-[191] biber-MSWIN64:342> INFO - === 
-[253] Biber.pm:421> INFO - Reading 'seminarska.bcf'
-[461] Biber.pm:999> INFO - Using all citekeys in bib section 0
-[493] Biber.pm:4487> INFO - Processing section 0
-[513] Biber.pm:4678> INFO - Looking for bibtex file 'viri.bib' for section 0
-[613] bibtex.pm:1713> INFO - LaTeX decoding ...
-[644] bibtex.pm:1519> INFO - Found BibTeX data source 'viri.bib'
-[789] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[790] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'variable = shifted' with 'variable = non-ignorable'
-[790] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'sl-SI'
-[828] bbl.pm:676> INFO - Writing 'seminarska.bbl' with encoding 'UTF-8'
-[837] bbl.pm:779> INFO - Output to seminarska.bbl
+[225] biber-MSWIN64:342> INFO - === 
+[287] Biber.pm:421> INFO - Reading 'seminarska.bcf'
+[497] Biber.pm:999> INFO - Using all citekeys in bib section 0
+[534] Biber.pm:4487> INFO - Processing section 0
+[562] Biber.pm:4678> INFO - Looking for bibtex file 'viri.bib' for section 0
+[641] bibtex.pm:1713> INFO - LaTeX decoding ...
+[664] bibtex.pm:1519> INFO - Found BibTeX data source 'viri.bib'
+[825] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'variable = shifted' with 'variable = non-ignorable'
+[825] UCollate.pm:68> INFO - Overriding locale 'sl-SI' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[826] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'sl-SI'
+[865] bbl.pm:676> INFO - Writing 'seminarska.bbl' with encoding 'UTF-8'
+[874] bbl.pm:779> INFO - Output to seminarska.bbl

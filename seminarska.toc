@@ -2,33 +2,33 @@
 \contentsline {section}{\numberline {1}Uvod}{5}{section.1}%
 \contentsline {section}{\numberline {2}Pregled področja}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Javni potniški promet v digitalnem okolju}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Obstoječe rešitve in njihove pomanjkljivosti}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Obstoječe rešitve in njihove pomanjkljivosti}{5}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Tehnični standardi in protokoli}{6}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Arhitektura aplikacije}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Pregled arhitekturne zasnove}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Odjemalska stran -- React SPA}{7}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Odjemalska stran - React SPA}{7}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Strežniška plast -- Vercel brezstrežniške funkcije}{7}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Upravljanje stanja aplikacije}{7}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Podatkovni sloj -- modul \texttt {Api.jsx}}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Pregled modula}{8}{subsection.4.1}%
+\contentsline {section}{\numberline {4}Podatkovni sloj - modul \texttt {Api.jsx}}{7}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Pregled modula}{7}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Mehanizem predpomnjenja}{8}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Normalizacija prihodov}{8}{subsection.4.3}%
 \contentsline {subsection}{\numberline {4.4}Pridobivanje položajev vozil}{9}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Sledenje vlakom z interpolacijo položaja}{9}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.5}Sledenje vlakom z interpoliranjem položaja}{9}{subsection.4.5}%
 \contentsline {section}{\numberline {5}Kartografski prikaz}{10}{section.5}%
 \contentsline {subsection}{\numberline {5.1}Knjižnica MapLibre GL}{10}{subsection.5.1}%
 \contentsline {subsection}{\numberline {5.2}Organizacija sloja karte}{10}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Gruče postajališč}{11}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Prikaz izbrane poti}{11}{subsection.5.4}%
 \contentsline {subsection}{\numberline {5.5}Prilagodljiva frekvenca osveževanja}{11}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Uporabniški vmesnik}{11}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Zavihek Postaje}{11}{subsection.6.1}%
+\contentsline {section}{\numberline {6}Uporabniški vmesnik}{12}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Zavihek Postaje}{12}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Zavihek Linije}{12}{subsection.6.2}%
 \contentsline {subsection}{\numberline {6.3}Zavihek Nastavitve}{12}{subsection.6.3}%
 \contentsline {section}{\numberline {7}Izzivi med razvojem in rešitve}{12}{section.7}%
 \contentsline {subsection}{\numberline {7.1}Neujemanje postajališč med podsistemi}{12}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}Heterogenost podatkovnih vmesnikov}{13}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Dinamično posodabljanje URL-ja za pridobivanje položajev vlakov}{13}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.3}Dinamično posodabljanje URL-ja za pridobivanje položajev vlakov}{14}{subsection.7.3}%
 \contentsline {subsection}{\numberline {7.4}Dekodiranje poti vlakov}{14}{subsection.7.4}%
 \contentsline {section}{\numberline {8}Namestitev in gostovanje}{15}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Orodje za gradnjo Vite}{15}{subsection.8.1}%
