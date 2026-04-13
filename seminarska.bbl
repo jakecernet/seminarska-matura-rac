@@ -253,6 +253,34 @@
       \verb https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
       \endverb
     \endentry
+    \entry{szweb}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ba1d104c85f392cca034c56474ffd150}{%
+           family={{Nedžad Beus}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{ba1d104c85f392cca034c56474ffd150}
+      \strng{fullhash}{ba1d104c85f392cca034c56474ffd150}
+      \strng{fullhashraw}{ba1d104c85f392cca034c56474ffd150}
+      \strng{bibnamehash}{ba1d104c85f392cca034c56474ffd150}
+      \strng{authorbibnamehash}{ba1d104c85f392cca034c56474ffd150}
+      \strng{authornamehash}{ba1d104c85f392cca034c56474ffd150}
+      \strng{authorfullhash}{ba1d104c85f392cca034c56474ffd150}
+      \strng{authorfullhashraw}{ba1d104c85f392cca034c56474ffd150}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{dostopano: 1. 4. 2026}
+      \field{title}{Slovenske železnice API}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://map.vlak.si/
+      \endverb
+      \verb{url}
+      \verb https://map.vlak.si/
+      \endverb
+    \endentry
     \entry{ijppweb}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=77cce75b538eb005aae8688281fd5540}{%
@@ -275,10 +303,10 @@
       \field{title}{BrezAvta}
       \field{year}{2026}
       \verb{urlraw}
-      \verb https://brezavta.si/
+      \verb https://beta.brezavta.si/
       \endverb
       \verb{url}
-      \verb https://brezavta.si/
+      \verb https://beta.brezavta.si/
       \endverb
     \endentry
     \entry{motis}{misc}{}{}
@@ -314,34 +342,6 @@
       \endverb
       \verb{url}
       \verb https://motis-project.de/
-      \endverb
-    \endentry
-    \entry{szweb}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=e8af8fdc7fc143e02f2bd35725d98791}{%
-           family={{Slovenske železnice d.o.o.}},
-           familyi={S\bibinitperiod}}}%
-      }
-      \strng{namehash}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{fullhash}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{fullhashraw}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{bibnamehash}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{authorbibnamehash}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{authornamehash}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{authorfullhash}{e8af8fdc7fc143e02f2bd35725d98791}
-      \strng{authorfullhashraw}{e8af8fdc7fc143e02f2bd35725d98791}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{dostopano: 1. 4. 2026}
-      \field{title}{Slovenske železnice -- red vožnje}
-      \field{year}{2024}
-      \verb{urlraw}
-      \verb https://www.sz.si/
-      \endverb
-      \verb{url}
-      \verb https://www.sz.si/
       \endverb
     \endentry
     \entry{vite}{misc}{}{}
