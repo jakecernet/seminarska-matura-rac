@@ -89,9 +89,11 @@
     \thispagestyle{empty}
     \includegraphics[width=0.8\textwidth]{logo.png}
 
-    Splošna matura
     \vspace{\fill}
+    \begin{center}
+    Splošna matura\\
     Seminarska naloga pri predmetu računalništvo
+    \end{center}
 
     \Huge{\textbf{IJPP Tracker -- spletna aplikacija za sledenje javnemu potniškemu prometu v Republiki Sloveniji}}
 
@@ -131,7 +133,7 @@ Kljub temu, da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalni
 
 Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App - PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz trenutnih lokacij vozil na interaktivnem zemljevidu, iskanje postajališč, pregledovanje prihodov in sledenje posameznim linijam.
 
-V nalogi so postavljene naslednje hipoteze: (1) sodobne spletne tehnologije omogočajo vzpostavitev zmogljive aplikacije za sledenje javnega potniškega prometa brez nativnega mobilnega razvoja; (2) razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z ustrezno abstrakcijsko plastjo na strani odjemalca; (3) omejitve, ki jih prinesejo varnostne politike brskalnikov (CORS), zahtevajo posredovalni strežniški sloj.
+V nalogi so postavljene naslednje hipoteze: (1) sodobne spletne tehnologije omogočajo vzpostavitev zmogljive aplikacije za sledenje javnega potniškega prometa brez nativnega mobilnega razvoja; (2) razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z ustrezno abstrakcijsko plastjo na strani odjemalca; (3) omejitve, ki jih prinesejo varnostne politike brskalnikov (CORS - Cross-Origin Resource Sharing), zahtevajo posredovalni strežniški sloj, ki lahko učinkovito posreduje zahteve do zunanjih API-jev.
 
 \section{Pregled področja}
 
@@ -198,11 +200,11 @@ Ločevanje odjemalske in strežniške plasti zagotavlja, da je vsa logika prikaz
 
 \subsection{Odjemalska stran - React SPA}
 
-Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (zemljevid, postaje, linije,nastavitve) zagotavlja knjižnica React Router z načinom hash routing-a, ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
+Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (zemljevid, postaje, linije, nastavitve) zagotavlja knjižnica React Router z načinom hash routing-a, ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
 
 Komponente zavihkov so naložene z leno inicializacijo (\texttt{React.lazy}), kar pomeni, da se koda posameznega zavihka prenese šele ob prvem obisku tega zavihka. S tem se skrajša čas do prve interaktivnosti aplikacije.
 
-\subsection{Strežniška plast -- Vercel brezstrežniške funkcije}
+\subsection{Strežniška plast -- brezstrežniške funkcije (serverless functions)}
 
 Mapa \texttt{api/} vsebuje šest JavaScript datotek, ki se ob namestitvi na Vercel samodejno pretvorijo v HTTP-končne točke. Vsaka datoteka sledi vzorcu CORS-posrednika:
 \begin{itemize}[noitemsep]
@@ -403,7 +405,7 @@ Postajališča in avtobusi so pri nižji stopnji povečave prikazani v obliki gr
 
 \subsection{Prikaz izbrane poti}
 
-Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linije s postajišči. Trasa je prikazana kot linijski sloj na vrhu vseh ostalih slojev, postajišča na trasi pa so označena s krogi, ki so barvno usklajeni z barvno shemo prevoznika. Komponenta \texttt{RouteTab} prikaže predal s podrobnostmi o vsakem postajališču, vključno z predvidenimi časi prihodov.
+Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linije s postajišči. Trasa je prikazana kot linijski sloj na vrhu vseh ostalih slojev, postajišča na trasi pa so označena s krogi, ki so barvno usklajeni z barvno shemo prevoznika. Komponenta \texttt{RouteTab} prikaže predal s podrobnostmi o vsakem postajališču, vključno z predvidenimi časi prihodov, kot je prikazano na sliki 3.
 
 \begin{figure}[h!]
 \centering
@@ -438,7 +440,7 @@ Dodatno je osveževanje zaustavljeno, kadar je zavihek brskalnika v ozadju (zazn
 
 \subsection{Zavihek Postaje}
 
-Zavihek \texttt{StationsTab} omogoča iskanje postajališč po imenu in prikaz najbližjih glede na lokacijo uporabnika. Implementiran je v treh pogledih: \textit{V bližini} (privzeto), \textit{Vsa postajališča} in \textit{Priljubljena}.
+Zavihek \texttt{StationsTab} omogoča iskanje postajališč po imenu in prikaz najbližjih glede na lokacijo uporabnika. Implementiran je v treh pogledih: \textit{V bližini} (privzeto), \textit{Vsa postajališča} in \textit{Priljubljena}. Primer seznama postajališč je prikazan na sliki 4.
 
 Za zmogljivo prikazovanje dolgih seznamov, ki so pogosto dolgi več tisoč vnosov, je uporabljena tehnika virtualiziranega izrisovanja prek knjižnice \texttt{react-window}. Komponenta \texttt{VariableSizeList} izrisuje samo tiste vrstice, ki so dejansko vidne v pogledu (viewport), kar drastično zmanjša število DOM (Document Object Model) elementov in izboljša zmogljivost.
 
@@ -455,7 +457,7 @@ Priljubljena postajališča so shranjena v \texttt{localStorage} in so dostopna 
 
 Zavihek \texttt{LinesTab} prikazuje prihode za izbrano postajališče, ločeno po virih (LPP, IJPP, SŽ), ter seznam vseh aktivnih linij, pridobljenih iz GPS podatkov. Omogoča iskanje linij po imenu in označevanje priljubljenih linij.
 
-Ob kliku na prihod ali linijo se prikliče funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm.
+Ob kliku na prihod ali linijo se prikliče funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm, kot je razvidno na sliki 5.
 
 \begin{figure}[h!]
 \centering
@@ -579,13 +581,13 @@ Gradnja aplikacije poteka z orodjem Vite \cite{vite}, ki je sodobna alternativa 
 
 Aplikacija je konfigurirana kot PWA prek vtičnika \texttt{vite-plugin-pwa}. PWA je spletna aplikacija, ki jo je mogoče namestiti na domačo stran telefona ali namizja in deluje podobno kot nativna aplikacija \cite{pwa}. Konfigurirani so: servisni delavec (service worker) za predpomnjenje datotek, manifest z ikonami aplikacije v ločljivostih 192×192 in 512×512 pikslov ter meta oznake za podporo na napravah Apple iOS (\texttt{apple-mobile-web-app-capable}).
 
-\subsection{Kontinuirano nameščanje}
+\subsection{Nalaganje aplikacije na GitHub Pages in Vercel}
 
 Nameščanje aplikacije je avtomatizirano s skriptami v \texttt{package.json}: ukaz \texttt{npm run build} zgradi optimizirano različico, ukaz \texttt{npm run deploy} pa jo objavi na GitHub Pages prek paketa \texttt{gh-pages}. Vercel brezstrežniške funkcije se samodejno namestijo ob vsaki potisni objavi (push) v repozitorij.
 
 \section{Zaključek}
 
-Seminarska naloga je predstavila razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
+Seminarska naloga je predstavlja razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
 
 \newpage
 \begingroup

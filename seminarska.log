@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  13 APR 2026 20:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  13 APR 2026 20:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1320,7 +1320,7 @@ AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo.png>]
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-
 english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 118.
+(babel)             from babel-en.ini. Reported on input line 120.
  [2] (seminarska.toc
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -1359,17 +1359,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 
  [4] [5] [6]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-09.
+11.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 [7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 257.
+nput line 259.
  [8]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
-76.
+78.
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
@@ -1381,7 +1381,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 <img/map.png, id=313, 1443.89438pt x 691.83469pt>
 File: img/map.png Graphic file (type png)
 <use img/map.png>
-Package pdftex.def Info: img/map.png  used on input line 368.
+Package pdftex.def Info: img/map.png  used on input line 370.
 (pdftex.def)             Requested size: 455.24411pt x 218.12965pt.
 
 
@@ -1391,22 +1391,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <img/routa.png, id=346, 749.04843pt x 500.62032pt>
 File: img/routa.png Graphic file (type png)
 <use img/routa.png>
-Package pdftex.def Info: img/routa.png  used on input line 410.
+Package pdftex.def Info: img/routa.png  used on input line 412.
 (pdftex.def)             Requested size: 455.24411pt x 304.26268pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[11 <./img/map.png>] [12 <./img/routa.png>]
+ [11 <./img/map.png>] [12 <./img/routa.png>]
 <img/postaje.png, id=362, 1445.4pt x 696.35156pt>
 File: img/postaje.png Graphic file (type png)
 <use img/postaje.png>
-Package pdftex.def Info: img/postaje.png  used on input line 449.
+Package pdftex.def Info: img/postaje.png  used on input line 451.
 (pdftex.def)             Requested size: 455.24411pt x 219.32002pt.
 <img/linije.png, id=363, 1315.91624pt x 563.10374pt>
 File: img/linije.png Graphic file (type png)
 <use img/linije.png>
-Package pdftex.def Info: img/linije.png  used on input line 462.
+Package pdftex.def Info: img/linije.png  used on input line 464.
 (pdftex.def)             Requested size: 455.24411pt x 194.80371pt.
 
 
@@ -1420,7 +1416,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.490 ...pp linij, ki ustavljajo na postajališču
+l.492 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1435,7 +1431,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.490 ...pp linij, ki ustavljajo na postajališču
+l.492 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1450,7 +1446,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.490 ...pp linij, ki ustavljajo na postajališču
+l.492 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1465,7 +1461,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.490 ...pp linij, ki ustavljajo na postajališču
+l.492 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1475,13 +1471,13 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 [14 <./img/linije.png>]
 LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 5
-16.
+18.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 516.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 518.
 
 [15] [16] [17] [18] [19] [20] (seminarska.aux)
  ***********
@@ -1493,21 +1489,21 @@ L3 programming layer <2026-01-19>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `seminarska.out' has not changed.
-(rerunfilecheck)             Checksum: 66DA182B5A051761A6FA4A849259944A;7486.
+(rerunfilecheck)             Checksum: 6995B34FF7A27146FE0FC48EB12A89D8;7699.
 Package logreq Info: Writing requests to 'seminarska.run.xml'.
 \openout1 = `seminarska.run.xml'.
 
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 591 (\begingroup)
+### semi simple group (level 1) entered at line 593 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36323 strings out of 467866
- 677467 string characters out of 5418797
+ 36320 strings out of 467866
+ 677440 string characters out of 5418797
  1780735 words of memory out of 5000000
  64254 multiletter control sequences out of 15000+600000
- 657676 words of font info for 216 fonts, out of 8000000 for 9000
+ 657557 words of font info for 214 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,9n,94p,1045b,2057s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public
@@ -1519,7 +1515,7 @@ iKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/
 MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/M
 iKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/Mi
 KTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on seminarska.pdf (20 pages, 3050344 bytes).
+Output written on seminarska.pdf (20 pages, 3050784 bytes).
 PDF statistics:
  554 PDF objects out of 1000 (max. 8388607)
  204 named destinations out of 1000 (max. 500000)

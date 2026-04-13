@@ -2,12 +2,12 @@
 \contentsline {section}{\numberline {1}Uvod}{5}{section.1}%
 \contentsline {section}{\numberline {2}Pregled področja}{5}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Javni potniški promet v digitalnem okolju}{5}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Obstoječe rešitve in njihove pomanjkljivosti}{5}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Obstoječe rešitve in njihove pomanjkljivosti}{6}{subsection.2.2}%
 \contentsline {subsection}{\numberline {2.3}Tehnični standardi in protokoli}{6}{subsection.2.3}%
 \contentsline {section}{\numberline {3}Arhitektura aplikacije}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Pregled arhitekturne zasnove}{6}{subsection.3.1}%
 \contentsline {subsection}{\numberline {3.2}Odjemalska stran - React SPA}{7}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Strežniška plast -- Vercel brezstrežniške funkcije}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.3}Strežniška plast -- brezstrežniške funkcije (serverless functions)}{7}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Upravljanje stanja aplikacije}{7}{subsection.3.4}%
 \contentsline {section}{\numberline {4}Podatkovni sloj - modul \texttt {Api.jsx}}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Pregled modula}{8}{subsection.4.1}%
@@ -33,7 +33,7 @@
 \contentsline {section}{\numberline {8}Namestitev in gostovanje}{17}{section.8}%
 \contentsline {subsection}{\numberline {8.1}Orodje za gradnjo Vite}{17}{subsection.8.1}%
 \contentsline {subsection}{\numberline {8.2}Progresivna spletna aplikacija}{17}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Kontinuirano nameščanje}{17}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.3}Nalaganje aplikacije na GitHub Pages in Vercel}{17}{subsection.8.3}%
 \contentsline {section}{\numberline {9}Zaključek}{17}{section.9}%
 \contentsline {section}{\numberline {10}Priloge}{18}{section.10}%
 \contentsline {subsection}{\numberline {10.1}Izvorna koda aplikacije}{18}{subsection.10.1}%
