@@ -129,7 +129,7 @@ This paper describes the development of a progressive web application (PWA) call
 
 Javni potniški promet v Republiki Sloveniji deluje v okviru večih med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Javno podjetje Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integrirani javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
 
-Kljub temu, da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi v sproti preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
+Kljub temu, da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
 
 Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App - PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz trenutnih lokacij vozil na interaktivnem zemljevidu, iskanje postajališč, pregledovanje prihodov in sledenje posameznim linijam.
 
@@ -141,11 +141,11 @@ V nalogi so postavljene naslednje hipoteze: (1) sodobne spletne tehnologije omog
 
 Digitalizacija javnega potniškega prometa poteka na dveh ravneh. Na ravni zbiranja podatkov gre za nameščanje GPS-sprejemnikov in senzorjev v vozila, ki oddajajo podatke o položaju vozil v osrednji sistem. Na ravni distribucije gre za objavo teh podatkov prek standardiziranih vmesnikov, ki jih najenostavneje razumemo kot spletne naslove, na katere se poveže zunanji odjemalec in pridobi strukturirane podatke.
 
-Mednarodni standard za izmenjavo podatkov o javnem potniškem prometu je GTFS (General Transit Feed Specification), ki ga je prvotno razvil Google v sodelovanju s Portlandsko metropolitansko agencijo za transport \cite{gtfs}. Standard GTFS definira statične podatke (vozni redi, postajališča, linije), medtem ko razširitev GTFS-Realtime pokriva dinamične podatke (zamude, pozicije vozil, opozorila). Čeprav slovensko potniško omrežje v večji meri sledi tem standardom, posamezni sistemi implementirajo lastne razširitve in nestandardne vmesnike.
+Mednarodni standard za izmenjavo podatkov o javnem potniškem prometu je GTFS (General Transit Feed Specification), ki ga je prvotno razvil Google v sodelovanju s Portlandsko metropolitansko agencijo za transport \cite{gtfs}. Standard GTFS definira statične podatke (vozni redi, postajališča, linije), medtem ko razširitev GTFS-Realtime omogoča prenos dinamičnih podatkov (zamude, pozicije vozil, opozorila). Čeprav slovensko potniško omrežje v večji meri sledi tem standardom, posamezni sistemi implementirajo lastne razširitve in nestandardne vmesnike.
 
 \subsection{Obstoječe rešitve in njihove pomanjkljivosti}
 
-Na slovenskem trgu obstaja več delnih rešitev. Uradna aplikacija LPP Ljubljana \cite{lppapp} pokriva izključno mestne avtobuse v Ljubljani. Spletni portal BrezAvta \cite{ijppweb} nudi načrtovanje poti od točke do točke za medkrajevne avtobuse, ni pa primeren za spremlajanje trenutnih pozicij avtobusov. Portal SŽ \cite{szweb} omogoča vpogled v red vožnje, ne prikazuje pa položajev vlakov na zemljevidu.
+Na slovenskem trgu obstaja več delnih rešitev. Uradna aplikacija LPP Ljubljana \cite{lppapp} pokriva izključno mestne avtobuse v Ljubljani. Spletni portal BrezAvta \cite{ijppweb} nudi načrtovanje poti od točke do točke za medkrajevne avtobuse, ni pa primeren za spremljanje trenutnih pozicij avtobusov. Portal SŽ \cite{szweb} omogoča vpogled v red vožnje, ne prikazuje pa položajev vlakov na zemljevidu.
 
 Skupna pomanjkljivost vseh navedenih rešitev je odsotnost enotnega pogleda, ki bi na enem mestu prikazoval vse oblike javnega prometa s skupnimi funkcijami iskanja in sledenja. Prav to vrzel zapolnjuje aplikacija IJPP Tracker.
 
@@ -157,7 +157,7 @@ Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih kon
 
 \subsection{Pregled arhitekturne zasnove}
 
-Aplikacija IJPP Tracker je zgrajena kot enostranska aplikacija (Single Page Application -- SPA) z dvonivojsko arhitekturo. Odjemalska stran je progresivna spletna aplikacija, razvita z ogrodjem React, ki teče neposredno v brskalniku. Strežniška stran je sestavljena iz brezstrežniških funkcij (serverless functions), ki delujejo na platformi Vercel in delujejo izključno kot CORS-posredniki.
+Aplikacija IJPP Tracker je zgrajena kot enostranska aplikacija (Single Page Application -- SPA) z dvonivojsko arhitekturo. Odjemalska stran je progresivna spletna aplikacija, razvita z ogrodjem React, ki teče neposredno v brskalniku. Strežniška stran je sestavljena iz brezstrežniških funkcij (serverless functions), ki delujejo na platformi Vercel in služijo izključno kot CORS-posredniki.
 
 Slika~\ref{fig:arch} prikazuje visokonivojski pogled na arhitekturo.
 
@@ -323,7 +323,7 @@ Obe strukturi se v funkcijah \texttt{fetchLPPPositions} in \texttt{fetchIJPPPosi
 
 \subsection{Sledenje vlakom z interpoliranjem položaja}
 
-Sledenje vlakom je tehnično zahtevnejše kot sledenje avtobusom, saj SŽ API ne oddaja dejanskih položajev vlakov s frekvenco, primerno za tekoče gibanje na karti. Rešitev temelji na predhodnem računanju celotne poti vlaka s časovnimi žigi in naknadnim interpoliranju položaja na osnovi sistemskega časa.
+Sledenje vlakom je tehnično zahtevnejše kot sledenje avtobusom, saj SŽ API ne oddaja dejanskih položajev vlakov s frekvenco, primerno za gladko gibanje na karti. Rešitev temelji na predhodnem računanju celotne poti vlaka s časovnimi žigi in naknadnim interpoliranju položaja na osnovi sistemskega časa.
 
 Funkcija \texttt{fetchTrainPositions} pridobi vse aktivne vlake v oknu 60 sekund. Vsak vlak vsebuje pot v kodirani obliki Polyline in čase odhoda ter prihoda. Iz teh podatkov se zgradi tabela točk z absolutnimi časovnimi žigi:
 
@@ -374,7 +374,7 @@ for (let i = 1; i < path.length; i++) {
 
 \subsection{Knjižnica MapLibre GL}
 
-Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Karti sta dve: svetla (OpenStreetMap Raster Light) in temna (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik.
+Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temem (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik.
 
 \subsection{Organizacija slojev karte}
 
@@ -457,7 +457,7 @@ Priljubljena postajališča so shranjena v \texttt{localStorage} in so dostopna 
 
 Zavihek \texttt{LinesTab} prikazuje prihode za izbrano postajališče, ločeno po virih (LPP, IJPP, SŽ), ter seznam vseh aktivnih linij, pridobljenih iz GPS podatkov. Omogoča iskanje linij po imenu in označevanje priljubljenih linij.
 
-Ob kliku na prihod ali linijo se prikliče funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm, kot je razvidno na sliki 5.
+Ob kliku na prihod ali linijo se izvede funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm, kot je razvidno na sliki 5.
 
 \begin{figure}[h!]
 \centering
@@ -474,7 +474,7 @@ Nastavitve omogočajo vklapljanje in izklapljanje posameznih slojev karte (avtob
 
 \subsection{Neujemanje postajališč med podsistemi}
 
-Eden najpomembnejših tehničnih izzivov je bilo dejstvo, da LPP, BrezAvta in sistema za identifikacijo postajališč ne uporabljata istih identifikatorjev. LPP ima lasten sistem šifer postajališč (\texttt{ref\_id}, \texttt{station\_code}), BrezAvta pa operira z identifikatorji, ki so skladni z GTFS standardom (\texttt{gtfs\_id}).
+Eden najpomembnejših tehničnih izzivov je bilo dejstvo, da LPP in BrezAvta API-ja za identifikacijo postajališč ne uporabljata istih identifikatorjev. LPP ima lasten sistem šifer postajališč (\texttt{ref\_id}, \texttt{station\_code}), BrezAvta pa operira z identifikatorji, ki so skladni z GTFS standardom (\texttt{gtfs\_id}).
 
 Izziv: postajališče Trzin - Zalog je v bazi LPP označeno z \texttt{ref\_id = 6201045}, v IJPP sistemu pa z \texttt{gtfs\_id = "lpp:6201045"}.
 
@@ -521,7 +521,7 @@ IJPP API prek strežnika \texttt{api.beta.brezavta.si} vrača prihode za postaja
 
 SŽ API prek strežnika \texttt{mapper-motis.ojpp-gateway.derp.si} temelji na odprtokodnem sistemu MOTIS \cite{motis} za načrtovanje potovanj. Za prihode vrača strukturo \texttt{\{stopTimes: [...]\}} z gnezdenim objektom \texttt{place}, za geometrijo poti pa kodirani polyline z natančnostjo 6 decimalnih mest (namesto standardnih 5).
 
-Rešitev je bila implementacija ločenih funkcij, ki normalizirajo izhod v enotno interno obliko.
+Rešitev je bila implementacija ločenih funkcij, ki formatirajo izhod v enotno interno obliko.
 
 Vse tri funkcije (\texttt{fetchLppArrivals}, \texttt{fetchIjppArrivals}, \texttt{fetchSzArrivals}) ob izhodu vrnejo tabelo objektov z istim naborom lastnosti: \texttt{etaMinutes}, \texttt{arrivalTime}, \texttt{tripName}, \texttt{tripId}, \texttt{realTime} in drugi.
 
@@ -583,11 +583,11 @@ Aplikacija je konfigurirana kot PWA prek vtičnika \texttt{vite-plugin-pwa}. PWA
 
 \subsection{Nalaganje aplikacije na GitHub Pages in Vercel}
 
-Nameščanje aplikacije je avtomatizirano s skriptami v \texttt{package.json}: ukaz \texttt{npm run build} zgradi optimizirano različico, ukaz \texttt{npm run deploy} pa jo objavi na GitHub Pages prek paketa \texttt{gh-pages}. Vercel brezstrežniške funkcije se samodejno namestijo ob vsaki potisni objavi (push) v repozitorij.
+Nameščanje aplikacije je avtomatizirano s skriptami v \texttt{package.json}: ukaz \texttt{npm run build} zgradi optimizirano različico, ukaz \texttt{npm run deploy} pa jo objavi na GitHub Pages prek paketa \texttt{gh-pages}. Vercel brezstrežniške funkcije se samodejno objavijo ob vsaki potisni objavi (push) v repozitorij.
 
 \section{Zaključek}
 
-Seminarska naloga je predstavlja razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
+Seminarska naloga predstavlja razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
 
 \newpage
 \begingroup
