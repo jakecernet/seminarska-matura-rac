@@ -20,19 +20,21 @@
 \contentsline {subsection}{\numberline {5.2}Organizacija slojev karte}{11}{subsection.5.2}%
 \contentsline {subsection}{\numberline {5.3}Gruče postajališč in avtobusov}{11}{subsection.5.3}%
 \contentsline {subsection}{\numberline {5.4}Prikaz izbrane poti}{11}{subsection.5.4}%
-\contentsline {subsection}{\numberline {5.5}Prilagodljiva frekvenca osveževanja}{11}{subsection.5.5}%
-\contentsline {section}{\numberline {6}Uporabniški vmesnik}{12}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Zavihek Postaje}{12}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Zavihek Linije}{12}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Zavihek Nastavitve}{12}{subsection.6.3}%
-\contentsline {section}{\numberline {7}Izzivi med razvojem in rešitve}{12}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Neujemanje postajališč med podsistemi}{12}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Heterogenost podatkovnih vmesnikov}{13}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}Dinamično posodabljanje URL-ja za pridobivanje položajev vlakov}{14}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}Dekodiranje poti vlakov}{14}{subsection.7.4}%
-\contentsline {section}{\numberline {8}Namestitev in gostovanje}{15}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Orodje za gradnjo Vite}{15}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Progresivna spletna aplikacija}{15}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}Kontinuirano nameščanje}{15}{subsection.8.3}%
-\contentsline {section}{\numberline {9}Zaključek}{15}{section.9}%
-\contentsline {section}{\numberline {10}Viri in literatura}{17}{section.10}%
+\contentsline {subsection}{\numberline {5.5}Prilagodljiva frekvenca osveževanja}{12}{subsection.5.5}%
+\contentsline {section}{\numberline {6}Uporabniški vmesnik}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Zavihek Postaje}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Zavihek Linije}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Zavihek Nastavitve}{13}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Izzivi med razvojem in rešitve}{14}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Neujemanje postajališč med podsistemi}{14}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Heterogenost podatkovnih vmesnikov}{15}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Dinamično posodabljanje URL-ja za pridobivanje položajev vlakov}{15}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}Dekodiranje poti vlakov}{16}{subsection.7.4}%
+\contentsline {section}{\numberline {8}Namestitev in gostovanje}{17}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Orodje za gradnjo Vite}{17}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Progresivna spletna aplikacija}{17}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Kontinuirano nameščanje}{17}{subsection.8.3}%
+\contentsline {section}{\numberline {9}Zaključek}{17}{section.9}%
+\contentsline {section}{\numberline {10}Priloge}{18}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Izvorna koda aplikacije}{18}{subsection.10.1}%
+\contentsline {section}{\numberline {11}Viri in literatura}{19}{section.11}%

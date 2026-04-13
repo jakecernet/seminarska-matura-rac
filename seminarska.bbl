@@ -129,13 +129,13 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
-      \field{title}{LPP Ljubljana -- uradna aplikacija}
+      \field{title}{LPP Ljubljana - uradni API}
       \field{year}{2024}
       \verb{urlraw}
-      \verb https://www.lpp.si/
+      \verb https://data.lpp.si/doc/
       \endverb
       \verb{url}
-      \verb https://www.lpp.si/
+      \verb https://data.lpp.si/doc/
       \endverb
     \endentry
     \entry{maplibre}{misc}{}{}
@@ -345,26 +345,21 @@
       \endverb
     \endentry
     \entry{vite}{misc}{}{}
-      \name{author}{2}{}{%
-        {{hash=c181205d8e6010f589e6c498afe0fe11}{%
-           family={You},
-           familyi={Y\bibinitperiod},
-           given={Evan},
-           giveni={E\bibinitperiod}}}%
+      \name{author}{1}{}{%
         {{hash=da8d88ece546832ef85a3e2a2d0fa09e}{%
            family={{Vite Contributors}},
            familyi={V\bibinitperiod}}}%
       }
-      \strng{namehash}{32a431afff99dc16bcd499db88725738}
-      \strng{fullhash}{36ce3903e54aec753443ad8d5d33d331}
-      \strng{fullhashraw}{36ce3903e54aec753443ad8d5d33d331}
-      \strng{bibnamehash}{36ce3903e54aec753443ad8d5d33d331}
-      \strng{authorbibnamehash}{36ce3903e54aec753443ad8d5d33d331}
-      \strng{authornamehash}{32a431afff99dc16bcd499db88725738}
-      \strng{authorfullhash}{36ce3903e54aec753443ad8d5d33d331}
-      \strng{authorfullhashraw}{36ce3903e54aec753443ad8d5d33d331}
-      \field{sortinit}{Y}
-      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \strng{namehash}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{fullhash}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{fullhashraw}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{bibnamehash}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{authorbibnamehash}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{authornamehash}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{authorfullhash}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \strng{authorfullhashraw}{da8d88ece546832ef85a3e2a2d0fa09e}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}

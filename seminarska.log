@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  13 APR 2026 19:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  13 APR 2026 20:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1121,6 +1121,37 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2025/11/14 1.11b listings language file
+)
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
+File: lstlang3.sty 2025/11/14 1.11b listings language file
+)
+
+! Package Listings Error: Couldn't load requested language.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \lstset{style=jsstyle}
+                           
+The following languages weren't loadable:
+    ,javascript$
+This may cause errors in the sequel.
+
+
+! Package Listings Error: language javascript undefined.
+
+See the Listings package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.79 \lstset{style=jsstyle}
+                           
+The language is not loadable. Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
@@ -1128,34 +1159,44 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 \@quotelevel=\count504
 \@quotereset=\count505
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
-4.
+5.
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (seminarska.aux
 Package babel Info: 'slovene' activates 'slovene' shorthands.
 (babel)             Reported on input line 9.
+
+
+LaTeX Warning: Label `fig:map' multiply defined.
+
+
+LaTeX Warning: Label `fig:map' multiply defined.
+
+
+LaTeX Warning: Label `fig:map' multiply defined.
+
 )
 \openout1 = `seminarska.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 84.
-LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
+LaTeX Font Info:    ... okay on input line 85.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1191,18 +1232,18 @@ LaTeX Font Info:    ... okay on input line 84.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 84.
+Package hyperref Info: Link coloring OFF on input line 85.
 (seminarska.out) (seminarska.out)
 \@outlinefile=\write5
 \openout5 = `seminarska.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 84.
-Package microtype Info: Applying patch `item' on input line 84.
-Package microtype Info: Applying patch `toc' on input line 84.
-Package microtype Info: Applying patch `eqnum' on input line 84.
-Package microtype Info: Applying patch `footnote' on input line 84.
-Package microtype Info: Applying patch `verbatim' on input line 84.
-LaTeX Info: Redefining \microtypesetup on input line 84.
+LaTeX Info: Redefining \microtypecontext on input line 85.
+Package microtype Info: Applying patch `item' on input line 85.
+Package microtype Info: Applying patch `toc' on input line 85.
+Package microtype Info: Applying patch `eqnum' on input line 85.
+Package microtype Info: Applying patch `footnote' on input line 85.
+Package microtype Info: Applying patch `verbatim' on input line 85.
+LaTeX Info: Redefining \microtypesetup on input line 85.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1265,12 +1306,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'seminarska.bbl' found.
  (seminarska.bbl)
-Package biblatex Info: Reference section=0 on input line 84.
-Package biblatex Info: Reference segment=0 on input line 84.
-<logo.png, id=154, 542.025pt x 69.25874pt>
+Package biblatex Info: Reference section=0 on input line 85.
+Package biblatex Info: Reference segment=0 on input line 85.
+<logo.png, id=162, 542.025pt x 69.25874pt>
 File: logo.png Graphic file (type png)
 <use logo.png>
-Package pdftex.def Info: logo.png  used on input line 89.
+Package pdftex.def Info: logo.png  used on input line 90.
 (pdftex.def)             Requested size: 364.19667pt x 46.53731pt.
  [1
 
@@ -1279,7 +1320,7 @@ AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./logo.png>]
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-
 english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 116.
+(babel)             from babel-en.ini. Reported on input line 118.
  [2] (seminarska.toc
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -1318,17 +1359,17 @@ Package microtype Info: Loading generic protrusion settings for font family
 
  [4] [5] [6]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-07.
+09.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
 [7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 255.
+nput line 257.
  [8]
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
-74.
+76.
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
@@ -1336,7 +1377,42 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9] [10] [11] [12]
+ [9]
+<img/map.png, id=313, 1443.89438pt x 691.83469pt>
+File: img/map.png Graphic file (type png)
+<use img/map.png>
+Package pdftex.def Info: img/map.png  used on input line 368.
+(pdftex.def)             Requested size: 455.24411pt x 218.12965pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[10]
+<img/routa.png, id=346, 749.04843pt x 500.62032pt>
+File: img/routa.png Graphic file (type png)
+<use img/routa.png>
+Package pdftex.def Info: img/routa.png  used on input line 410.
+(pdftex.def)             Requested size: 455.24411pt x 304.26268pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[11 <./img/map.png>] [12 <./img/routa.png>]
+<img/postaje.png, id=362, 1445.4pt x 696.35156pt>
+File: img/postaje.png Graphic file (type png)
+<use img/postaje.png>
+Package pdftex.def Info: img/postaje.png  used on input line 449.
+(pdftex.def)             Requested size: 455.24411pt x 219.32002pt.
+<img/linije.png, id=363, 1315.91624pt x 563.10374pt>
+File: img/linije.png Graphic file (type png)
+<use img/linije.png>
+Package pdftex.def Info: img/linije.png  used on input line 462.
+(pdftex.def)             Requested size: 455.24411pt x 194.80371pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <./img/postaje.png>]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
 
@@ -1344,7 +1420,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.460 ...pp linij, ki ustavljajo na postajališču
+l.490 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1359,7 +1435,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.460 ...pp linij, ki ustavljajo na postajališču
+l.490 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1374,7 +1450,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.460 ...pp linij, ki ustavljajo na postajališču
+l.490 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1389,7 +1465,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.460 ...pp linij, ki ustavljajo na postajališču
+l.490 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1397,49 +1473,55 @@ or specify an encoding such as \usepackage [latin1]{inputenc}
 in the document preamble.
 Alternatively, save the file in UTF-8 using your editor or another tool
 
-LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 4
-86.
+[14 <./img/linije.png>]
+LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 5
+16.
+
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 486.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 516.
 
-[13] [14] [15] [16] [17] [18] (seminarska.aux)
+[15] [16] [17] [18] [19] [20] (seminarska.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `seminarska.out' has not changed.
-(rerunfilecheck)             Checksum: 32E687E564BA33C78B155348A18195CA;7225.
+(rerunfilecheck)             Checksum: 66DA182B5A051761A6FA4A849259944A;7486.
 Package logreq Info: Writing requests to 'seminarska.run.xml'.
 \openout1 = `seminarska.run.xml'.
 
- ) 
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 591 (\begingroup)
+### bottom level 
 Here is how much of TeX's memory you used:
- 36433 strings out of 467866
- 678258 string characters out of 5418797
- 1781437 words of memory out of 5000000
- 64378 multiletter control sequences out of 15000+600000
- 657594 words of font info for 216 fonts, out of 8000000 for 9000
+ 36323 strings out of 467866
+ 677467 string characters out of 5418797
+ 1780735 words of memory out of 5000000
+ 64254 multiletter control sequences out of 15000+600000
+ 657676 words of font info for 216 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,95p,1045b,2136s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
-mmi12.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmsy8.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/urw/courier/ucrb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/urw/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/typ
-e1/urw/times/utmri8a.pfb>
-Output written on seminarska.pdf (18 pages, 253725 bytes).
+ 84i,9n,94p,1045b,2057s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public
+/amsfonts/cm/cmmi12.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/Jaka/AppData/Local/Programs/Mi
+KTeX/fonts/type1/urw/courier/ucrb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/M
+iKTeX/fonts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/
+MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/M
+iKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/Mi
+KTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on seminarska.pdf (20 pages, 3050343 bytes).
 PDF statistics:
- 519 PDF objects out of 1000 (max. 8388607)
- 196 named destinations out of 1000 (max. 500000)
- 47418 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 554 PDF objects out of 1000 (max. 8388607)
+ 204 named destinations out of 1000 (max. 500000)
+ 47454 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -73,10 +73,11 @@
   tabsize=2,
   frame=single,
   rulecolor=\color{gray!40},
-  language=Java
+  language=JavaScript
 }
 
 \lstset{style=jsstyle}
+\renewcommand{\lstlistingname}{Izsek kode}
 
 \title{IJPP Tracker - spletna aplikacija za sledenje javnemu potniškemu prometu v Republiki Sloveniji}
 \author{Jaka Černetič, G 4. A}
@@ -88,6 +89,7 @@
     \thispagestyle{empty}
     \includegraphics[width=0.8\textwidth]{logo.png}
 
+    Splošna matura
     \vspace{\fill}
     Seminarska naloga pri predmetu računalništvo
 
@@ -361,6 +363,13 @@ for (let i = 1; i < path.length; i++) {
 
 \section{Kartografski prikaz}
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{img/map.png}
+\caption{Zavihek z zemljevidom}
+\label{fig:map}
+\end{figure}
+
 \subsection{Knjižnica MapLibre GL}
 
 Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Karti sta dve: svetla (OpenStreetMap Raster Light) in temna (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik.
@@ -396,6 +405,13 @@ Postajališča in avtobusi so pri nižji stopnji povečave prikazani v obliki gr
 
 Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linije s postajišči. Trasa je prikazana kot linijski sloj na vrhu vseh ostalih slojev, postajišča na trasi pa so označena s krogi, ki so barvno usklajeni z barvno shemo prevoznika. Komponenta \texttt{RouteTab} prikaže predal s podrobnostmi o vsakem postajališču, vključno z predvidenimi časi prihodov.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{img/routa.png}
+\caption{Prikaz trase izbrane linije na karti}
+\label{fig:map}
+\end{figure}
+
 \subsection{Prilagodljiva frekvenca osveževanja}
 
 Frekvenca pridobivanja podatkov o položajih avtobusov je dinamično prilagojena stopnji povečave karte (zoom level):
@@ -428,11 +444,25 @@ Za zmogljivo prikazovanje dolgih seznamov, ki so pogosto dolgi več tisoč vnoso
 
 Priljubljena postajališča so shranjena v \texttt{localStorage} in so dostopna tudi brez omrežne povezave. Razdalja od uporabnika je izračunana z Haversine formulo in prikazana poleg vsakega postajališča.
 
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{img/postaje.png}
+\caption{Seznam postaj}
+\label{fig:map}
+\end{figure}
+
 \subsection{Zavihek Linije}
 
 Zavihek \texttt{LinesTab} prikazuje prihode za izbrano postajališče, ločeno po virih (LPP, IJPP, SŽ), ter seznam vseh aktivnih linij, pridobljenih iz GPS podatkov. Omogoča iskanje linij po imenu in označevanje priljubljenih linij.
 
 Ob kliku na prihod ali linijo se prikliče funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm.
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=1\textwidth]{img/linije.png}
+\caption{Prikaz prihodov linij na postajo}
+\label{fig:map}
+\end{figure}
 
 \subsection{Zavihek Nastavitve}
 
@@ -555,15 +585,24 @@ Nameščanje aplikacije je avtomatizirano s skriptami v \texttt{package.json}: u
 
 \section{Zaključek}
 
-Seminarska naloga je predstavila razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil.
+Seminarska naloga je predstavila razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
 
-Potrjeni sta bili dve od treh zastavljenih hipotez. Prvič, sodobne spletne tehnologije - konkretno React, MapLibre GL in ogrodje PWA - omogočajo vzpostavitev zmogljive aplikacije za sledenje javnemu potniškega prometa brez nativnega mobilnega razvoja; namestitev aplikacije na mobilno napravo kot PWA je funkcionalno enakovredna nativnim aplikacijam za ta namen. Drugič, razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z abstrakcijsko plastjo v modulu \texttt{Api.jsx}, ki normalizira heterogene strukture v enotni interni format.
+\newpage
+\begingroup
+\makeatletter
+\section{Priloge}
+\makeatother
 
-Tretja hipoteza - da varnostne politike CORS zahtevajo strežniški posredovalni sloj -- je bila prav tako potrjena: dva od treh podatkovnih virov (LPP in SŽ API) zahtevata posredovanje prek Vercel brezstrežniških funkcij.
+\subsection{Izvorna koda aplikacije}
 
-Trije ključni izzivi, ki so bili identificirani in rešeni: (1) neujemanje identifikatorjev postajališč je bilo rešeno z ročno pripravljeno enotitveno datoteko \texttt{unified\_stops\_with\_gtfs.json}; (2) heterogenost podatkovnih vmesnikov je bila naslovljena z normalizacijskim slojem in ločenimi funkcijami za vsak sistem; (3) dinamično posodabljanje URL-ja za SŽ API je bilo rešeno s funkcijo, ki ob vsakem klicu zgradi aktualni naslov.
+Celotna izvorna koda aplikacije IJPP Tracker je dostopna v javnem repozitoriju na platformi GitHub:
 
-Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
+\begin{itemize}
+\item \textbf{Odjemalska aplikacija (React):} \url{https://github.com/jakecernet/ijpp-tracker}
+\item \textbf{Serverless funkcije (Vercel):} Vključene v istem repozitoriju v mapi \texttt{api/}
+\item \textbf{Podatki postajališč:} \url{https://github.com/jakecernet/ijpp-json}
+\item \textbf{Spletna stran:} \url{https://tracker.cernetic.cc}
+\end{itemize}
 
 \newpage
 \begingroup
