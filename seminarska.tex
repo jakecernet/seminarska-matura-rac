@@ -79,7 +79,7 @@
 \lstset{style=jsstyle}
 \renewcommand{\lstlistingname}{Izsek kode}
 
-\title{IJPP Tracker - spletna aplikacija za sledenje javnemu potniškemu prometu v Republiki Sloveniji}
+\title{Aplikacija za sledenje javnemu prometu}
 \author{Jaka Černetič, G 4. A}
 
 \begin{document}
@@ -95,12 +95,12 @@
     Seminarska naloga pri predmetu računalništvo
     \end{center}
 
-    \Huge{\textbf{IJPP Tracker -- spletna aplikacija za sledenje javnemu potniškemu prometu v Republiki Sloveniji}}
+    \Huge{\textbf{Aplikacija za sledenje javnemu prometu}}
 
     \normalsize
     \vspace{\fill}
 
-    Mentor: Matjaž Majnik, prof. \hfill Avtor: Jaka Černetič, G 4. A\\
+    Mentor: Matjaž Majnik, univ. dipl. inž. \hfill Avtor: Jaka Černetič, G 4. A\\
     \null
     Ljubljana, \MMYYYYdate\today
 \end{center}
@@ -374,7 +374,7 @@ for (let i = 1; i < path.length; i++) {
 
 \subsection{Knjižnica MapLibre GL}
 
-Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temem (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik.
+Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temem (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik. Na sliki 2 je prikazan svetli zemljevid z izrisanimi položaji avtobusov in postajališč.
 
 \subsection{Organizacija slojev karte}
 
@@ -457,7 +457,7 @@ Priljubljena postajališča so shranjena v \texttt{localStorage} in so dostopna 
 
 Zavihek \texttt{LinesTab} prikazuje prihode za izbrano postajališče, ločeno po virih (LPP, IJPP, SŽ), ter seznam vseh aktivnih linij, pridobljenih iz GPS podatkov. Omogoča iskanje linij po imenu in označevanje priljubljenih linij.
 
-Ob kliku na prihod ali linijo se izvede funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm, kot je razvidno na sliki 5.
+Ob kliku na prihod ali linijo se izvede funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm, kot je prikazano na sliki 5.
 
 \begin{figure}[h!]
 \centering
@@ -602,7 +602,7 @@ Celotna izvorna koda aplikacije IJPP Tracker je dostopna v javnem repozitoriju n
 \begin{itemize}
 \item \textbf{Odjemalska aplikacija (React):} \url{https://github.com/jakecernet/ijpp-tracker}
 \item \textbf{Serverless funkcije (Vercel):} Vključene v istem repozitoriju v mapi \texttt{api/}
-\item \textbf{Podatki postajališč:} \url{https://github.com/jakecernet/ijpp-json}
+\item \textbf{Seznami postajališč:} \url{https://github.com/jakecernet/ijpp-json}
 \item \textbf{Spletna stran:} \url{https://tracker.cernetic.cc}
 \end{itemize}
 
@@ -619,7 +619,7 @@ Celotna izvorna koda aplikacije IJPP Tracker je dostopna v javnem repozitoriju n
 \begin{samepage}
     \thispagestyle{empty}
     \section*{Izjava o avtorstvu}
-    Izjavljam, da je seminarska naloga z naslovom \textit{IJPP Tracker - spletna aplikacija za sledenje javnega potniškega prometa v Republiki Sloveniji} v celoti moje avtorsko delo, ki sem ga izdelal samostojno s pomočjo navedene literature in pod vodstvom mentorja.
+    Izjavljam, da je seminarska naloga z naslovom \textit{Aplikacija za sledenje javnemu prometu} v celoti moje avtorsko delo, ki sem ga izdelal samostojno s pomočjo navedene literature in pod vodstvom mentorja.
 
     \vfill
 
