@@ -19,39 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nyt/global//global/global/global}
-    \entry{restapi}{misc}{}{}
-      \name{author}{1}{}{%
-        {{hash=87dbbd44b3977c28b71d826a931add3e}{%
-           family={Fielding},
-           familyi={F\bibinitperiod},
-           given={Roy\bibnamedelima Thomas},
-           giveni={R\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
-      }
-      \list{publisher}{1}{%
-        {University of California, Irvine}%
-      }
-      \strng{namehash}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{fullhash}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{fullhashraw}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{bibnamehash}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{authorbibnamehash}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{authornamehash}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{authorfullhash}{87dbbd44b3977c28b71d826a931add3e}
-      \strng{authorfullhashraw}{87dbbd44b3977c28b71d826a931add3e}
-      \field{sortinit}{F}
-      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{dostopano: 1. 4. 2026}
-      \field{title}{Architectural Styles and the Design of Network-based Software Architectures}
-      \field{year}{2000}
-      \verb{urlraw}
-      \verb https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
-      \endverb
-      \verb{url}
-      \verb https://ics.uci.edu/~fielding/pubs/dissertation/top.htm
-      \endverb
-    \endentry
     \entry{polyline}{misc}{}{}
       \name{author}{1}{}{%
         {{hash=7b568e72d25af32b0cec03e49cbf3f70}{%

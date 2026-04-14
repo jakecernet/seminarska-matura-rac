@@ -105,9 +105,10 @@
     Ljubljana, \MMYYYYdate\today
 \end{center}
 \newpage
+\thispagestyle{empty}
 
 \section*{Povzetek}
-Seminarska naloga opisuje razvoj progresivne spletne aplikacije IJPP Tracker, namenjene sprotnemu sledenju vozil javnega potniškega prometa v Republiki Sloveniji. Aplikacija združuje podatke treh neodvisnih sistemov -- Ljubljanskega potniškega prometa (LPP), Integriranega javnega potniškega prometa (IJPP) in Slovenskih železnic (SŽ) -- ter jih prikazuje na interaktivnem zemljevidu. Naloga obravnava arhitekturo sistema, uporabljene tehnologije in ključne izzive, ki so se pojavili med razvojem: neujemanje identifikatorjev postaj med podsistemi, heterogenost podatkovnih vmesnikov ter potrebo po dinamičnem gradenju zahtevnih spletnih naslovov.
+Seminarska naloga opisuje razvoj progresivne spletne aplikacije IJPP Tracker, namenjene sprotnemu sledenju vozil javnega potniškega prometa v Republiki Sloveniji. Aplikacija združuje podatke treh neodvisnih sistemov -- Ljubljanskega potniškega prometa (LPP), Integriranega javnega potniškega prometa (IJPP) in Slovenskih železnic (SŽ) -- ter jih prikazuje na interaktivnem zemljevidu. Naloga obravnava arhitekturo sistema, uporabljene tehnologije in ključne izzive, ki so se pojavili med razvojem: neujemanje identifikatorjev postaj med podsistemi, heterogenost podatkovnih vmesnikov ter potrebo po dinamičnem grajenju zahtevnih spletnih naslovov.
 
 \textbf{Ključne besede:} javni potniški promet, React, PWA, MapLibre GL, REST API, GTFS, LPP, IJPP, SŽ
 
@@ -127,9 +128,9 @@ This paper describes the development of a progressive web application (PWA) call
 \newpage
 \section{Uvod}
 
-Javni potniški promet v Republiki Sloveniji deluje v okviru večih med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Javno podjetje Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integrirani javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
+Javni potniški promet v Republiki Sloveniji deluje v okviru večjih, med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Javno podjetje Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integrirani javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
 
-Kljub temu, da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
+Kljub temu da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
 
 Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App - PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz trenutnih lokacij vozil na interaktivnem zemljevidu, iskanje postajališč, pregledovanje prihodov in sledenje posameznim linijam.
 
@@ -151,7 +152,7 @@ Skupna pomanjkljivost vseh navedenih rešitev je odsotnost enotnega pogleda, ki 
 
 \subsection{Tehnični standardi in protokoli}
 
-Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih konceptov. Prvi je REST API (Representational State Transfer Application Programming Interface), ki je arhitekturni slog za gradnjo spletnih vmesnikov, pri katerem odjemalec pošlje zahtevo HTTP na določen URL in prejme podatke v obliki JSON \cite{restapi}. Drugi je mehanizem CORS (Cross-Origin Resource Sharing), varnostna politika brskalnikov, ki preprečuje, da bi skripta na enem spletnem naslovu neposredno dostopala do podatkov na drugem spletnem naslovu brez ustreznega dovoljenja strežnika \cite{cors}. Ker nekateri javni API-ji ne nastavljajo ustreznih glav CORS, aplikacija potrebuje posredovalni strežnik (proxy), ki zahteve posreduje v imenu odjemalca.
+Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih konceptov. Prvi je REST API (Representational State Transfer Application Programming Interface), ki je arhitekturni slog za gradnjo spletnih vmesnikov, pri katerem odjemalec pošlje zahtevo HTTP na določen URL in prejme podatke v obliki JSON. Drugi je mehanizem CORS (Cross-Origin Resource Sharing), varnostna politika brskalnikov, ki preprečuje, da bi skripta na enem spletnem naslovu neposredno dostopala do podatkov na drugem spletnem naslovu brez ustreznega dovoljenja strežnika \cite{cors}. Ker nekateri javni API-ji ne nastavljajo ustreznih glav CORS, aplikacija potrebuje posredovalni strežnik (proxy), ki zahteve posreduje v imenu odjemalca.
 
 \section{Arhitektura aplikacije}
 
@@ -200,7 +201,7 @@ Ločevanje odjemalske in strežniške plasti zagotavlja, da je vsa logika prikaz
 
 \subsection{Odjemalska stran - React SPA}
 
-Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (zemljevid, postaje, linije, nastavitve) zagotavlja knjižnica React Router z načinom hash routing-a, ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
+Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (zemljevid, postaje, linije, nastavitve) zagotavlja knjižnica React Router z načinom hash routinga, ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
 
 Komponente zavihkov so naložene z leno inicializacijo (\texttt{React.lazy}), kar pomeni, da se koda posameznega zavihka prenese šele ob prvem obisku tega zavihka. S tem se skrajša čas do prve interaktivnosti aplikacije.
 
@@ -228,7 +229,7 @@ Trajnost stanja med sejami je zagotovljena s shranjevanjem v \texttt{localStorag
 
 \subsection{Pregled modula}
 
-Datoteka \texttt{src/Api.jsx} je osrednji podatkovni sloj aplikacije in obsega dobrih 700 vrstic kode. Vsebuje vse funkcije za pridobivanje podatkov iz zunanjih virov, logiko za predpomnjenje, pomožne funkcije za formatiranje časovnih podatkov ter algoritme za dekodiranje geografskih poti in interpolacijo položajev vozil.
+Datoteka \texttt{src/Api.jsx} je osrednji podatkovni sloj aplikacije in obsega okoli 700 vrstic kode. Vsebuje vse funkcije za pridobivanje podatkov iz zunanjih virov, logiko za predpomnjenje, pomožne funkcije za formatiranje časovnih podatkov ter algoritme za dekodiranje geografskih poti in interpolacijo položajev vozil.
 
 \subsection{Mehanizem predpomnjenja}
 
@@ -374,7 +375,7 @@ for (let i = 1; i < path.length; i++) {
 
 \subsection{Knjižnica MapLibre GL}
 
-Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temem (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik. Na sliki 2 je prikazan svetli zemljevid z izrisanimi položaji avtobusov in postajališč.
+Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temen (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik. Na sliki 2 je prikazan svetli zemljevid z izrisanimi položaji avtobusov in postajališč.
 
 \subsection{Organizacija slojev karte}
 
@@ -401,11 +402,11 @@ Vsaka entiteta na karti je urejena v plast (\textit{layer}), ki je vezana na vir
 
 \subsection{Gruče postajališč in avtobusov}
 
-Postajališča in avtobusi so pri nižji stopnji povečave prikazani v obliki gruč (cluster). Ko je elementov preveč za pregleden prikaz, se samodejno združijo v krog s številko, ki pove, koliko jih je v skupini. Z večanjem povečave se gruče razpustijo v posamezna postaje in avtobuse.
+Postajališča in avtobusi so pri nižji stopnji povečave prikazani v obliki gruč (cluster). Ko je elementov preveč za pregleden prikaz, se samodejno združijo v krog s številko, ki pove, koliko jih je v skupini. Z večanjem povečave se gruče razpustijo v posamezne postaje in avtobuse.
 
 \subsection{Prikaz izbrane poti}
 
-Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linije s postajišči. Trasa je prikazana kot linijski sloj na vrhu vseh ostalih slojev, postajišča na trasi pa so označena s krogi, ki so barvno usklajeni z barvno shemo prevoznika. Komponenta \texttt{RouteTab} prikaže predal s podrobnostmi o vsakem postajališču, vključno z predvidenimi časi prihodov, kot je prikazano na sliki 3.
+Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linije s postajišči. Trasa je prikazana kot linijski sloj na vrhu vseh ostalih slojev, postajišča na trasi pa so označena s krogi, ki so barvno usklajeni z barvno shemo prevoznika. Komponenta \texttt{RouteTab} prikaže predal s podrobnostmi o vsakem postajališču, vključno s predvidenimi časi prihodov, kot je prikazano na sliki 3.
 
 \begin{figure}[h!]
 \centering
@@ -515,7 +516,7 @@ Osnova za ta mehanizem je enotna datoteka \texttt{unified\_stops\_with\_gtfs.jso
 
 Vsak od treh prometnih sistemov vrača podatke prek vmesnikov s povsem različnimi strukturami, avtentikacijo in obnašanjem.
 
-LPP API zahteva, da ga naslavljamo prek Vercel proxy-ja, saj neposredni dostop iz brskalnika ni dovoljen. Vrača podatke v obliki \texttt{\{data: \{arrivals: [...]\}\}}, kjer so prihodi urejeni po \texttt{eta\_min}. API je razmeroma zanesljiv in dokumentiran.
+LPP API zahteva, da ga naslavljamo prek Vercel proxy-ja, saj neposredni dostop iz brskalnika ni dovoljen. Podatke vrača v obliki \texttt{\{data: \{arrivals: [...]\}\}}, kjer so prihodi urejeni po \texttt{eta\_min}. API je razmeroma zanesljiv in dokumentiran.
 
 IJPP API prek strežnika \texttt{api.beta.brezavta.si} vrača prihode za postajališče s parametrom \texttt{?current=true} v obliki \texttt{\{arrivals: [...]\}}, kjer so časi prihoda in odhoda v sekundah od polnoči.
 
@@ -587,7 +588,7 @@ Nameščanje aplikacije je avtomatizirano s skriptami v \texttt{package.json}: u
 
 \section{Zaključek}
 
-Seminarska naloga predstavlja razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: IJPP API vzdržuje ekipa prostovoljcev, prav tako SŽ API, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
+Seminarska naloga predstavlja razvoj aplikacije IJPP Tracker, ki uspešno združuje podatke treh ločenih sistemov javnega potniškega prometa v Republiki Sloveniji v enoten spletni vmesnik s sprotnim sledenjem vozil. Med razvojem je bilo ugotovljeno, da dostopnost in stabilnost javnih API-jev ostajata izziv: API IJPP vzdržuje ekipa prostovoljcev, prav tako API SŽ, kar pomeni, da lahko pride do občasnih nedostopnosti ali sprememb v strukturi podatkov, ki zahtevajo prilagoditve v aplikaciji. 
 
 \newpage
 \begingroup
