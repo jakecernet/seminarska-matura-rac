@@ -40,7 +40,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{Encoded Polyline Algorithm Format}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://developers.google.com/maps/documentation/utilities/polylinealgorithm
       \endverb
@@ -69,7 +69,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{General Transit Feed Specification Reference}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://gtfs.org/documentation/schedule/reference/
       \endverb
@@ -97,7 +97,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{LPP Ljubljana - uradni API}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://data.lpp.si/doc/
       \endverb
@@ -125,7 +125,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{MapLibre GL JS}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://maplibre.org/maplibre-gl-js/docs/
       \endverb
@@ -153,7 +153,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{React -- A JavaScript library for building user interfaces}
-      \field{year}{2024}
+      \field{year}{2026}
       \true{nocite}
       \verb{urlraw}
       \verb https://react.dev/
@@ -183,7 +183,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{Cross-Origin Resource Sharing (CORS)}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
       \endverb
@@ -212,7 +212,7 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{Progressive Web Apps}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
       \verb https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps
       \endverb
@@ -303,12 +303,12 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{MOTIS: Multi-modal Travel Information System}
-      \field{year}{2023}
+      \field{year}{2026}
       \verb{urlraw}
-      \verb https://motis-project.de/
+      \verb https://github.com/motis-project/motis
       \endverb
       \verb{url}
-      \verb https://motis-project.de/
+      \verb https://github.com/motis-project/motis
       \endverb
     \endentry
     \entry{vite}{misc}{}{}
@@ -331,12 +331,12 @@
       \field{labeltitlesource}{title}
       \field{note}{dostopano: 1. 4. 2026}
       \field{title}{Vite -- Next Generation Frontend Tooling}
-      \field{year}{2024}
+      \field{year}{2026}
       \verb{urlraw}
-      \verb https://vitejs.dev/
+      \verb https://vite.dev/
       \endverb
       \verb{url}
-      \verb https://vitejs.dev/
+      \verb https://vite.dev/
       \endverb
     \endentry
   \enddatalist
