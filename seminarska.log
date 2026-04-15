@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  14 APR 2026 20:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.2) (preloaded format=pdflatex 2026.4.11)  15 APR 2026 21:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -839,6 +839,14 @@ Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
 \backup@length=\skip58
 \ar@cellbox=\box71
 )
+(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count377
+\float@exts=\toks47
+\float@box=\box72
+\@float@everytoks=\toks48
+\@floatcapt=\box73
+)
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
@@ -856,61 +864,61 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthL=\skip70
 \f@nch@widthC=\skip71
 \f@nch@widthR=\skip72
-\@temptokenb=\toks47
+\@temptokenb=\toks49
 )
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count377
+\lrq@indent=\count378
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count378
-\c@listtotal=\count379
-\c@listcount=\count380
-\c@liststart=\count381
-\c@liststop=\count382
-\c@citecount=\count383
-\c@citetotal=\count384
-\c@multicitecount=\count385
-\c@multicitetotal=\count386
-\c@instcount=\count387
-\c@maxnames=\count388
-\c@minnames=\count389
-\c@maxitems=\count390
-\c@minitems=\count391
-\c@citecounter=\count392
-\c@maxcitecounter=\count393
-\c@savedcitecounter=\count394
-\c@uniquelist=\count395
-\c@uniquename=\count396
-\c@refsection=\count397
-\c@refsegment=\count398
-\c@maxextratitle=\count399
-\c@maxextratitleyear=\count400
-\c@maxextraname=\count401
-\c@maxextradate=\count402
-\c@maxextraalpha=\count403
-\c@abbrvpenalty=\count404
-\c@highnamepenalty=\count405
-\c@lownamepenalty=\count406
-\c@maxparens=\count407
-\c@parenlevel=\count408
-\blx@tempcnta=\count409
-\blx@tempcntb=\count410
-\blx@tempcntc=\count411
-\c@blx@maxsection=\count412
-\blx@maxsegment@0=\count413
-\blx@notetype=\count414
-\blx@parenlevel@text=\count415
-\blx@parenlevel@foot=\count416
-\blx@sectionciteorder@0=\count417
-\blx@sectionciteorderinternal@0=\count418
-\blx@entrysetcounter=\count419
-\blx@biblioinstance=\count420
+\c@tabx@nest=\count379
+\c@listtotal=\count380
+\c@listcount=\count381
+\c@liststart=\count382
+\c@liststop=\count383
+\c@citecount=\count384
+\c@citetotal=\count385
+\c@multicitecount=\count386
+\c@multicitetotal=\count387
+\c@instcount=\count388
+\c@maxnames=\count389
+\c@minnames=\count390
+\c@maxitems=\count391
+\c@minitems=\count392
+\c@citecounter=\count393
+\c@maxcitecounter=\count394
+\c@savedcitecounter=\count395
+\c@uniquelist=\count396
+\c@uniquename=\count397
+\c@refsection=\count398
+\c@refsegment=\count399
+\c@maxextratitle=\count400
+\c@maxextratitleyear=\count401
+\c@maxextraname=\count402
+\c@maxextradate=\count403
+\c@maxextraalpha=\count404
+\c@abbrvpenalty=\count405
+\c@highnamepenalty=\count406
+\c@lownamepenalty=\count407
+\c@maxparens=\count408
+\c@parenlevel=\count409
+\blx@tempcnta=\count410
+\blx@tempcntb=\count411
+\blx@tempcntc=\count412
+\c@blx@maxsection=\count413
+\blx@maxsegment@0=\count414
+\blx@notetype=\count415
+\blx@parenlevel@text=\count416
+\blx@parenlevel@foot=\count417
+\blx@sectionciteorder@0=\count418
+\blx@sectionciteorderinternal@0=\count419
+\blx@entrysetcounter=\count420
+\blx@biblioinstance=\count421
 \labelnumberwidth=\skip73
 \labelalphawidth=\skip74
 \biblabelsep=\skip75
@@ -922,9 +930,9 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count421
-\c@maxcomprange=\count422
-\c@mincompwidth=\count423
+\c@mincomprange=\count422
+\c@maxcomprange=\count423
+\c@mincompwidth=\count424
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -935,74 +943,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count424
-\c@savedafterword=\count425
-\c@annotator=\count426
-\c@savedannotator=\count427
-\c@author=\count428
-\c@savedauthor=\count429
-\c@bookauthor=\count430
-\c@savedbookauthor=\count431
-\c@commentator=\count432
-\c@savedcommentator=\count433
-\c@editor=\count434
-\c@savededitor=\count435
-\c@editora=\count436
-\c@savededitora=\count437
-\c@editorb=\count438
-\c@savededitorb=\count439
-\c@editorc=\count440
-\c@savededitorc=\count441
-\c@foreword=\count442
-\c@savedforeword=\count443
-\c@holder=\count444
-\c@savedholder=\count445
-\c@introduction=\count446
-\c@savedintroduction=\count447
-\c@namea=\count448
-\c@savednamea=\count449
-\c@nameb=\count450
-\c@savednameb=\count451
-\c@namec=\count452
-\c@savednamec=\count453
-\c@translator=\count454
-\c@savedtranslator=\count455
-\c@shortauthor=\count456
-\c@savedshortauthor=\count457
-\c@shorteditor=\count458
-\c@savedshorteditor=\count459
-\c@labelname=\count460
-\c@savedlabelname=\count461
-\c@institution=\count462
-\c@savedinstitution=\count463
-\c@lista=\count464
-\c@savedlista=\count465
-\c@listb=\count466
-\c@savedlistb=\count467
-\c@listc=\count468
-\c@savedlistc=\count469
-\c@listd=\count470
-\c@savedlistd=\count471
-\c@liste=\count472
-\c@savedliste=\count473
-\c@listf=\count474
-\c@savedlistf=\count475
-\c@location=\count476
-\c@savedlocation=\count477
-\c@organization=\count478
-\c@savedorganization=\count479
-\c@origlocation=\count480
-\c@savedoriglocation=\count481
-\c@origpublisher=\count482
-\c@savedorigpublisher=\count483
-\c@publisher=\count484
-\c@savedpublisher=\count485
-\c@language=\count486
-\c@savedlanguage=\count487
-\c@origlanguage=\count488
-\c@savedoriglanguage=\count489
-\c@pageref=\count490
-\c@savedpageref=\count491
+\c@afterword=\count425
+\c@savedafterword=\count426
+\c@annotator=\count427
+\c@savedannotator=\count428
+\c@author=\count429
+\c@savedauthor=\count430
+\c@bookauthor=\count431
+\c@savedbookauthor=\count432
+\c@commentator=\count433
+\c@savedcommentator=\count434
+\c@editor=\count435
+\c@savededitor=\count436
+\c@editora=\count437
+\c@savededitora=\count438
+\c@editorb=\count439
+\c@savededitorb=\count440
+\c@editorc=\count441
+\c@savededitorc=\count442
+\c@foreword=\count443
+\c@savedforeword=\count444
+\c@holder=\count445
+\c@savedholder=\count446
+\c@introduction=\count447
+\c@savedintroduction=\count448
+\c@namea=\count449
+\c@savednamea=\count450
+\c@nameb=\count451
+\c@savednameb=\count452
+\c@namec=\count453
+\c@savednamec=\count454
+\c@translator=\count455
+\c@savedtranslator=\count456
+\c@shortauthor=\count457
+\c@savedshortauthor=\count458
+\c@shorteditor=\count459
+\c@savedshorteditor=\count460
+\c@labelname=\count461
+\c@savedlabelname=\count462
+\c@institution=\count463
+\c@savedinstitution=\count464
+\c@lista=\count465
+\c@savedlista=\count466
+\c@listb=\count467
+\c@savedlistb=\count468
+\c@listc=\count469
+\c@savedlistc=\count470
+\c@listd=\count471
+\c@savedlistd=\count472
+\c@liste=\count473
+\c@savedliste=\count474
+\c@listf=\count475
+\c@savedlistf=\count476
+\c@location=\count477
+\c@savedlocation=\count478
+\c@organization=\count479
+\c@savedorganization=\count480
+\c@origlocation=\count481
+\c@savedoriglocation=\count482
+\c@origpublisher=\count483
+\c@savedorigpublisher=\count484
+\c@publisher=\count485
+\c@savedpublisher=\count486
+\c@language=\count487
+\c@savedlanguage=\count488
+\c@origlanguage=\count489
+\c@savedoriglanguage=\count490
+\c@pageref=\count491
+\c@savedpageref=\count492
 \shorthandwidth=\skip81
 \shortjournalwidth=\skip82
 \shortserieswidth=\skip83
@@ -1027,19 +1035,19 @@ Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count492
-\c@textcitetotal=\count493
-\c@textcitemaxnames=\count494
-\c@biburlbigbreakpenalty=\count495
-\c@biburlbreakpenalty=\count496
-\c@biburlnumpenalty=\count497
-\c@biburlucpenalty=\count498
-\c@biburllcpenalty=\count499
+\c@textcitecount=\count493
+\c@textcitetotal=\count494
+\c@textcitemaxnames=\count495
+\c@biburlbigbreakpenalty=\count496
+\c@biburlbreakpenalty=\count497
+\c@biburlnumpenalty=\count498
+\c@biburlucpenalty=\count499
+\c@biburllcpenalty=\count500
 \biburlbigskip=\muskip19
 \biburlnumskip=\muskip20
 \biburlucskip=\muskip21
 \biburllcskip=\muskip22
-\c@smartand=\count500
+\c@smartand=\count501
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -1063,8 +1071,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bb
 x
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count501
-\c@bbx:relatedtotal=\count502
+\c@bbx:relatedcount=\count502
+\c@bbx:relatedtotal=\count503
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -1103,7 +1111,7 @@ Package: expl3 2026-01-19 L3 programming layer (loader)
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdft
 ex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count503
+\l__color_backend_stack_int=\count504
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2026-01-19 L3 programming layer (loader) 
@@ -1121,45 +1129,14 @@ Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
 )
-(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
-File: lstlang2.sty 2025/11/14 1.11b listings language file
-)
-(C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
-File: lstlang3.sty 2025/11/14 1.11b listings language file
-)
-
-! Package Listings Error: Couldn't load requested language.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79 \lstset{style=jsstyle}
-                           
-The following languages weren't loadable:
-    ,javascript$
-This may cause errors in the sequel.
-
-
-! Package Listings Error: language javascript undefined.
-
-See the Listings package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.79 \lstset{style=jsstyle}
-                           
-The language is not loadable. Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count504
-\@quotereset=\count505
+\@quotelevel=\count505
+\@quotereset=\count506
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
-5.
+6.
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -1173,30 +1150,27 @@ LaTeX Warning: Label `fig:map' multiply defined.
 
 LaTeX Warning: Label `fig:map' multiply defined.
 
-
-LaTeX Warning: Label `fig:map' multiply defined.
-
 )
 \openout1 = `seminarska.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1232,18 +1206,18 @@ LaTeX Font Info:    ... okay on input line 85.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 85.
+Package hyperref Info: Link coloring OFF on input line 86.
 (seminarska.out) (seminarska.out)
 \@outlinefile=\write5
 \openout5 = `seminarska.out'.
 
-LaTeX Info: Redefining \microtypecontext on input line 85.
-Package microtype Info: Applying patch `item' on input line 85.
-Package microtype Info: Applying patch `toc' on input line 85.
-Package microtype Info: Applying patch `eqnum' on input line 85.
-Package microtype Info: Applying patch `footnote' on input line 85.
-Package microtype Info: Applying patch `verbatim' on input line 85.
-LaTeX Info: Redefining \microtypesetup on input line 85.
+LaTeX Info: Redefining \microtypecontext on input line 86.
+Package microtype Info: Applying patch `item' on input line 86.
+Package microtype Info: Applying patch `toc' on input line 86.
+Package microtype Info: Applying patch `eqnum' on input line 86.
+Package microtype Info: Applying patch `footnote' on input line 86.
+Package microtype Info: Applying patch `verbatim' on input line 86.
+LaTeX Info: Redefining \microtypesetup on input line 86.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -1261,17 +1235,17 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mki
 i
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count506
+\scratchcounter=\count507
 \scratchdimen=\dimen308
-\scratchbox=\box72
-\nofMPsegments=\count507
-\nofMParguments=\count508
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count509
+\scratchbox=\box74
+\nofMPsegments=\count508
+\nofMParguments=\count509
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count510
 \MPscratchDim=\dimen309
-\MPnumerator=\count510
-\makeMPintoPDFobject=\count511
-\everyMPtoPDFconversion=\toks49
+\MPnumerator=\count511
+\makeMPintoPDFobject=\count512
+\everyMPtoPDFconversion=\toks51
 )
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-ba
 se.sty
@@ -1283,8 +1257,9 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 g
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@lstlisting=\count512
+\c@lstlisting=\count513
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'slovene'...
 Package biblatex Info: ... file 'slovene.lbx' found.
@@ -1306,12 +1281,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'seminarska.bbl' found.
  (seminarska.bbl)
-Package biblatex Info: Reference section=0 on input line 85.
-Package biblatex Info: Reference segment=0 on input line 85.
+Package biblatex Info: Reference section=0 on input line 86.
+Package biblatex Info: Reference segment=0 on input line 86.
 <img/logo.png, id=162, 542.025pt x 69.25874pt>
 File: img/logo.png Graphic file (type png)
 <use img/logo.png>
-Package pdftex.def Info: img/logo.png  used on input line 90.
+Package pdftex.def Info: img/logo.png  used on input line 91.
 (pdftex.def)             Requested size: 364.19667pt x 46.53731pt.
  [1
 
@@ -1320,7 +1295,7 @@ AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./img/logo.png>]
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-
 english.tex)
 Package babel Info: Importing data for english
-(babel)             from babel-en.ini. Reported on input line 121.
+(babel)             from babel-en.ini. Reported on input line 122.
  [2] (seminarska.toc
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
@@ -1359,17 +1334,22 @@ Package microtype Info: Loading generic protrusion settings for font family
 
  [4] [5] [6]
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-12.
+13.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
+Overfull \hbox (2.68135pt too wide) in paragraph at lines 227--228
+[]\OT1/ptm/m/n/12 (-20) Trajnost sta-nja med se-jami je za-go-to-vljena s shra-
+nje-va-njem v lo-kalno shrambo (\OT1/pcr/m/n/12 localStorage\OT1/ptm/m/n/12 (-2
+0) )
+ []
+
 [7]
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 260.
- [8]
+nput line 261.
 LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 2
-79.
+73.
  (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1pcr.fd
 File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
 )
@@ -1377,38 +1357,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `pcr' (encoding: TS1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [9]
-<img/map.png, id=311, 1443.89438pt x 691.83469pt>
+
+[8] [9]
+<img/map.png, id=301, 1443.89438pt x 691.83469pt>
 File: img/map.png Graphic file (type png)
 <use img/map.png>
-Package pdftex.def Info: img/map.png  used on input line 371.
-(pdftex.def)             Requested size: 455.24411pt x 218.12965pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[10] [11 <./img/map.png>]
-<img/routa.png, id=352, 749.04843pt x 500.62032pt>
+Package pdftex.def Info: img/map.png  used on input line 365.
+(pdftex.def)             Requested size: 409.71692pt x 196.3093pt.
+ [10]
+<img/routa.png, id=333, 749.04843pt x 500.62032pt>
 File: img/routa.png Graphic file (type png)
 <use img/routa.png>
-Package pdftex.def Info: img/routa.png  used on input line 413.
-(pdftex.def)             Requested size: 455.24411pt x 304.26268pt.
- [12 <./img/routa.png>]
-<img/postaje.png, id=360, 1445.4pt x 696.35156pt>
+Package pdftex.def Info: img/routa.png  used on input line 402.
+(pdftex.def)             Requested size: 409.71692pt x 273.82953pt.
+ [11 <./img/map.png>] [12 <./img/routa.png>]
+<img/postaje.png, id=349, 1445.4pt x 696.35156pt>
 File: img/postaje.png Graphic file (type png)
 <use img/postaje.png>
-Package pdftex.def Info: img/postaje.png  used on input line 452.
-(pdftex.def)             Requested size: 455.24411pt x 219.32002pt.
-<img/linije.png, id=361, 1315.91624pt x 563.10374pt>
+Package pdftex.def Info: img/postaje.png  used on input line 441.
+(pdftex.def)             Requested size: 409.71692pt x 197.38908pt.
+<img/linije.png, id=350, 1315.91624pt x 563.10374pt>
 File: img/linije.png Graphic file (type png)
 <use img/linije.png>
-Package pdftex.def Info: img/linije.png  used on input line 465.
-(pdftex.def)             Requested size: 455.24411pt x 194.80371pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[13 <./img/postaje.png>]
+Package pdftex.def Info: img/linije.png  used on input line 454.
+(pdftex.def)             Requested size: 409.71692pt x 175.32506pt.
+ [13 <./img/postaje.png>]
 
 ! LaTeX Error: Invalid UTF-8 byte sequence (�\expandafter).
 
@@ -1416,7 +1389,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.493 ...pp linij, ki ustavljajo na postajališču
+l.482 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1431,7 +1404,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.493 ...pp linij, ki ustavljajo na postajališču
+l.482 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1446,7 +1419,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.493 ...pp linij, ki ustavljajo na postajališču
+l.482 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1461,7 +1434,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.493 ...pp linij, ki ustavljajo na postajališču
+l.482 ...pp linij, ki ustavljajo na postajališču
                                                   
 The document does not appear to be in UTF-8 encoding.
 Try adding \UseRawInputEncoding as the first line of the file
@@ -1471,13 +1444,13 @@ Alternatively, save the file in UTF-8 using your editor or another tool
 
 [14 <./img/linije.png>]
 LaTeX Font Info:    Trying to load font information for OMS+pcr on input line 5
-19.
+08.
 
 (C:\Users\Jaka\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omspcr.fd
 File: omspcr.fd 
 )
 LaTeX Font Info:    Font shape `OMS/pcr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 519.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 508.
 
 [15] [16] [17] [18] [19] [20] (seminarska.aux)
  ***********
@@ -1496,16 +1469,16 @@ Package logreq Info: Writing requests to 'seminarska.run.xml'.
  )
 (\end occurred inside a group at level 1)
 
-### semi simple group (level 1) entered at line 594 (\begingroup)
+### semi simple group (level 1) entered at line 583 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 36315 strings out of 467866
- 677311 string characters out of 5418797
- 1778571 words of memory out of 5000000
- 64250 multiletter control sequences out of 15000+600000
+ 36501 strings out of 467866
+ 679436 string characters out of 5418797
+ 1776008 words of memory out of 5000000
+ 64449 multiletter control sequences out of 15000+600000
  657557 words of font info for 214 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,9n,94p,1045b,2057s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,9n,95p,1045b,2142s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type1/public
 /amsfonts/cm/cmmi12.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fo
@@ -1514,9 +1487,9 @@ onts/type1/urw/courier/ucrr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmb8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/f
 onts/type1/urw/times/utmr8a.pfb><C:/Users/Jaka/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmri8a.pfb>
-Output written on seminarska.pdf (20 pages, 3040499 bytes).
+Output written on seminarska.pdf (20 pages, 3039233 bytes).
 PDF statistics:
- 545 PDF objects out of 1000 (max. 8388607)
- 203 named destinations out of 1000 (max. 500000)
+ 532 PDF objects out of 1000 (max. 8388607)
+ 192 named destinations out of 1000 (max. 500000)
  47454 words of extra memory for PDF output out of 51595 (max. 10000000)
 

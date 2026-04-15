@@ -23,6 +23,7 @@
 \usepackage{datetime}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{float}
 \usepackage{fancyhdr}
 \usepackage[style=ieee, maxbibnames=3, minbibnames=1,
     maxcitenames=1, mincitenames=1, sorting=nyt]{biblatex}
@@ -45,7 +46,7 @@
 \DeclareFieldFormat[online]{title}{\mkbibemph{#1}}
 
 \DefineBibliographyStrings{slovene}{
-  andothers = {et. al\adddot},
+  andothers = {et al\adddot},
   urlseen = {dostopano:}
 }
 
@@ -73,7 +74,7 @@
   tabsize=2,
   frame=single,
   rulecolor=\color{gray!40},
-  language=JavaScript
+  language=Java
 }
 
 \lstset{style=jsstyle}
@@ -115,7 +116,7 @@ Seminarska naloga opisuje razvoj progresivne spletne aplikacije IJPP Tracker, na
 \vfill
 \section*{Abstract}
 \foreignlanguage{english}{%
-This paper describes the development of a progressive web application (PWA) called IJPP Tracker, designed for real-time tracking of public transport vehicles in the Republic of Slovenia. The application aggregates data from three independent systems — Ljubljana City Bus (LPP), Integrated Public Transport (IJPP), and Slovenian Railways (SŽ) — and displays them on an interactive map. The paper covers the system architecture, the technologies used, and the key challenges encountered during development: mismatched station identifiers across subsystems, heterogeneous data interfaces, and the need for dynamically constructed API request URLs.
+This paper describes the development of a progressive web application (PWA) called IJPP Tracker, designed for real-time tracking of public transport vehicles in the Republic of Slovenia. The application integrates data from three independent systems — Ljubljana City Bus (LPP), Integrated Public Transport (IJPP), and Slovenian Railways (SŽ) — and displays them on an interactive map. The paper covers the system architecture, the technologies used, and the key challenges encountered during development: mismatched station identifiers across subsystems, heterogeneous data interfaces, and the need for dynamically constructed API request URLs.
 
 \textbf{Keywords:} public transport, React, PWA, MapLibre GL, REST API, GTFS, LPP, IJPP, S\v{Z}
 }
@@ -128,13 +129,13 @@ This paper describes the development of a progressive web application (PWA) call
 \newpage
 \section{Uvod}
 
-Javni potniški promet v Republiki Sloveniji deluje v okviru večjih, med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Javno podjetje Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integrirani javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
+Javni potniški promet v Republiki Sloveniji deluje v okviru večjih, med seboj delno ločenih sistemov. V Mestni občini Ljubljana avtobusni promet zagotavlja Ljubljanski potniški promet d.o.o. (LPP), medregijski in primestni avtobusni promet pa koordinira Ministrstvo za infrastrukturo v okviru sistema Integrirani javni potniški promet (IJPP), ki vključuje prevoznike, kot so Arriva Slovenija, Nomago in Marprom. Železniški promet operira v okviru družbe Slovenske železnice d.o.o. (SŽ).
 
-Kljub temu da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupni postajališčni točki, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
+Kljub temu da vsak od omenjenih sistemov zagotavlja določeno stopnjo digitalnih informacij za potnike, ti sistemi med seboj niso integrirani v enotno uporabniško izkušnjo. Uporabnik, ki želi preveriti, kdaj bo prispel naslednji mestni ali medkrajevni avtobus in vlak na skupno postajališčno točko, mora obiskati vsaj tri različne spletne ali mobilne aplikacije. Ta razdrobljenost je bila ena izmed osnovnih motivacij za razvoj aplikacije IJPP Tracker.
 
-Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App - PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz trenutnih lokacij vozil na interaktivnem zemljevidu, iskanje postajališč, pregledovanje prihodov in sledenje posameznim linijam.
+Namen seminarske naloge je celovita predstavitev razvoja progresivne spletne aplikacije (Progressive Web App - PWA), ki združuje podatkovne tokove vseh treh navedenih prometnih podsistemov v enoten vmesnik. Aplikacija omogoča prikaz trenutnih lokacij vozil na interaktivnem zemljevidu, iskanje postajališč, pregled prihodov in sledenje posameznim linijam.
 
-V nalogi so postavljene naslednje hipoteze: (1) sodobne spletne tehnologije omogočajo vzpostavitev zmogljive aplikacije za sledenje javnega potniškega prometa brez nativnega mobilnega razvoja; (2) razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z ustrezno abstrakcijsko plastjo na strani odjemalca; (3) omejitve, ki jih prinesejo varnostne politike brskalnikov (CORS - Cross-Origin Resource Sharing), zahtevajo posredovalni strežniški sloj, ki lahko učinkovito posreduje zahteve do zunanjih API-jev.
+V nalogi sem postavil naslednje hipoteze: (1) sodobne spletne tehnologije omogočajo vzpostavitev zmogljive aplikacije za sledenje javnega potniškega prometa brez nativnega mobilnega razvoja; (2) razlike med podatkovnimi vmesniki posameznih sistemov je mogoče premostiti z ustrezno abstrakcijsko plastjo na strani odjemalca; (3) omejitve, ki jih prinesejo varnostne politike brskalnikov (CORS - Cross-Origin Resource Sharing), zahtevajo posredovalni strežniški sloj, ki lahko učinkovito posreduje zahteve do zunanjih API-jev.
 
 \section{Pregled področja}
 
@@ -146,13 +147,13 @@ Mednarodni standard za izmenjavo podatkov o javnem potniškem prometu je GTFS (G
 
 \subsection{Obstoječe rešitve in njihove pomanjkljivosti}
 
-Na slovenskem trgu obstaja več delnih rešitev. Uradna aplikacija LPP Ljubljana \cite{lppapp} pokriva izključno mestne avtobuse v Ljubljani. Spletni portal BrezAvta \cite{ijppweb} nudi načrtovanje poti od točke do točke za medkrajevne avtobuse, ni pa primeren za spremljanje trenutnih pozicij avtobusov. Portal SŽ \cite{szweb} omogoča vpogled v red vožnje, ne prikazuje pa položajev vlakov na zemljevidu.
+Na slovenskem trgu obstaja več delnih rešitev. Uradna aplikacija LPP Ljubljana \cite{lppapp} in zunanja aplikacija Travana pokrivata izključno mestne avtobuse v Ljubljani. Spletni portal BrezAvta \cite{ijppweb} nudi načrtovanje poti od točke do točke, ni pa primeren za spremljanje trenutnih pozicij avtobusov. Portal SŽ \cite{szweb} omogoča vpogled v red vožnje, ne prikazuje pa položajev vlakov na zemljevidu.
 
 Skupna pomanjkljivost vseh navedenih rešitev je odsotnost enotnega pogleda, ki bi na enem mestu prikazoval vse oblike javnega prometa s skupnimi funkcijami iskanja in sledenja. Prav to vrzel zapolnjuje aplikacija IJPP Tracker.
 
 \subsection{Tehnični standardi in protokoli}
 
-Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih konceptov. Prvi je REST API (Representational State Transfer Application Programming Interface), ki je arhitekturni slog za gradnjo spletnih vmesnikov, pri katerem odjemalec pošlje zahtevo HTTP na določen URL in prejme podatke v obliki JSON. Drugi je mehanizem CORS (Cross-Origin Resource Sharing), varnostna politika brskalnikov, ki preprečuje, da bi skripta na enem spletnem naslovu neposredno dostopala do podatkov na drugem spletnem naslovu brez ustreznega dovoljenja strežnika \cite{cors}. Ker nekateri javni API-ji ne nastavljajo ustreznih glav CORS, aplikacija potrebuje posredovalni strežnik (proxy), ki zahteve posreduje v imenu odjemalca.
+Za razumevanje arhitekture aplikacije je ključno poznavanje dveh tehničnih konceptov. Prvi je REST API (Representational State Transfer Application Programming Interface), arhitekturni slog za gradnjo spletnih vmesnikov, pri katerem odjemalec pošlje zahtevo HTTP na določen URL in prejme podatke v obliki JSON. Drugi je mehanizem CORS (Cross-Origin Resource Sharing), varnostna politika brskalnikov, ki preprečuje, da bi skripta na enem spletnem naslovu neposredno dostopala do podatkov na drugem spletnem naslovu brez ustreznega dovoljenja strežnika \cite{cors}. Ker nekateri javni API-ji ne nastavljajo ustreznih glav CORS, aplikacija potrebuje posredovalni strežnik (proxy), ki zahteve posreduje v imenu odjemalca.
 
 \section{Arhitektura aplikacije}
 
@@ -197,17 +198,17 @@ Slika~\ref{fig:arch} prikazuje visokonivojski pogled na arhitekturo.
 \label{fig:arch}
 \end{figure}
 
-Ločevanje odjemalske in strežniške plasti zagotavlja, da je vsa logika prikaza in obdelave podatkov na strani odjemalca, medtem ko strežniška plast služi zgolj kot posrednik pri zahtevah, ki jih brskalniki sicer blokirajo zaradi varnostnih politik CORS. Statični podatki, kot so seznami postaj in poti linij, so shranjeni na platformi GitHub v obliki JSON datotek in jih aplikacija pridobi neposredno brez proxy posrednika, saj ta endpoint dovoljuje CORS dostop.
+Ločevanje odjemalske in strežniške plasti zagotavlja, da je vsa logika prikaza in obdelave podatkov na strani odjemalca, medtem ko strežniška plast služi zgolj kot posrednik pri zahtevah, ki jih brskalniki sicer blokirajo zaradi varnostnih politik CORS. Statični podatki, kot so seznami postaj in poti linij, so shranjeni na platformi GitHub v obliki JSON datotek, ki jih aplikacija pridobi neposredno brez proxy posrednika, saj ta endpoint dovoljuje CORS dostop.
 
 \subsection{Odjemalska stran - React SPA}
 
 Odjemalska aplikacija je organizirana v hierarhijo komponent, pri čemer je korenski element komponenta \texttt{App}, ki upravlja globalno stanje in koordinira izmenjavo podatkov med zavihki. Navigacijo med štirimi glavnimi razdelki (zemljevid, postaje, linije, nastavitve) zagotavlja knjižnica React Router z načinom hash routinga, ki je primeren za statično gostovanje na platformah brez podpore za strežniško usmerjanje.
 
-Komponente zavihkov so naložene z leno inicializacijo (\texttt{React.lazy}), kar pomeni, da se koda posameznega zavihka prenese šele ob prvem obisku tega zavihka. S tem se skrajša čas do prve interaktivnosti aplikacije.
+Komponente zavihkov so naložene z leno inicializacijo (\texttt{React.lazy}), kar pomeni, da se koda posameznega zavihka prenese šele ob prvem obisku tega zavihka, s čimer se skrajša čas do prve interaktivnosti aplikacije.
 
 \subsection{Strežniška plast -- brezstrežniške funkcije (serverless functions)}
 
-Mapa \texttt{api/} vsebuje šest JavaScript datotek, ki se ob namestitvi na Vercel samodejno pretvorijo v HTTP-končne točke. Vsaka datoteka sledi vzorcu CORS-posrednika:
+Mapa \texttt{api/} v repozitoriju s kodo vsebuje šest JavaScript datotek, ki se ob namestitvi na Vercel samodejno pretvorijo v HTTP-končne točke. Vsaka datoteka sledi vzorcu CORS-posrednika:
 \begin{itemize}[noitemsep]
 \item sprejme zahtevo od odjemalca,
 \item jo posreduje ciljnemu API-ju,
@@ -223,7 +224,7 @@ Nekatere, na primer \texttt{lpp-arrivals.js}, so konfigurirane kot \texttt{runti
 
 Globalno stanje aplikacije je centralizirano v komponenti \texttt{App} in zajema: seznam postajališč (\texttt{busStops}, \texttt{szStops}), trenutne položaje vozil (\texttt{gpsPositions}, \texttt{trainPositions}), aktivno postajališče (\texttt{activeStation}), prihode za aktivno postajališče (\texttt{lppArrivals}, \texttt{ijppArrivals}, \texttt{szArrivals}), izbrano vozilo (\texttt{selectedVehicle}) in nastavitve vidnosti plasti na zemljevidu (\texttt{visibility}, \texttt{busOperators}).
 
-Trajnost stanja med sejami je zagotovljena s shranjevanjem v \texttt{localStorage} brskalnika, kjer se ob vsaki posodobitvi zapišejo nastavitve teme, aktivno postajališče, nastavitve na zemljevidu prikazanih slojev in seznam priljubljenih postajališč.
+Trajnost stanja med sejami je zagotovljena s shranjevanjem v lokalno shrambo (\texttt{localStorage}) brskalnika, kjer se ob vsaki posodobitvi zapišejo nastavitve teme, aktivno postajališče, nastavitve na zemljevidu prikazanih slojev in seznam priljubljenih postajališč.
 
 \section{Podatkovni sloj - modul \texttt{Api.jsx}}
 
@@ -235,7 +236,7 @@ Datoteka \texttt{src/Api.jsx} je osrednji podatkovni sloj aplikacije in obsega o
 
 Aplikacija implementira lastno dvoplastno shemo predpomnjenja, ki sledi različnim veljavnostim podatkov glede na njihovo naravo:
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Veljavnost predpomnjenih podatkov glede na tip}
 \begin{tabular}{lll}
@@ -259,15 +260,8 @@ Trije podatkovni viri prihodov vračajo čase v različnih formatah: LPP API vra
 
 \begin{lstlisting}[caption={Normalizacija ETA iz različnih formatov}, label={lst:eta}]
 function computeEtaAndTime(arrival) {
-	let etaMin = arrival.etaMinutes ?? arrival.eta_min ?? undefined;
-	let actualTime =
-		arrival.realtimeDeparture ||
-		arrival.actualDeparture ||
-		arrival.scheduledDeparture ||
-		arrival.estimated_arrival_time ||
-		arrival.arrival_time ||
-		arrival.realtimeArrival ||
-		arrival.scheduledArrival;
+	let etaMin = ...;
+	let actualTime = ...; 
 
 	let actualDate = null;
 	if (actualTime) {
@@ -288,11 +282,7 @@ function computeEtaAndTime(arrival) {
 
 	// Generate ETA if missing
 	if (etaMin === undefined && actualDate) {
-		const now = new Date();
-		etaMin = Math.max(
-			0,
-			Math.round((actualDate.getTime() - now.getTime()) / 60000),
-		);
+		...
 	}
 
 	// Generate actual time if missing
@@ -329,7 +319,7 @@ Sledenje vlakom je tehnično zahtevnejše kot sledenje avtobusom, saj SŽ API ne
 Funkcija \texttt{fetchTrainPositions} pridobi vse aktivne vlake v oknu 60 sekund. Vsak vlak vsebuje pot v kodirani obliki Polyline in čase odhoda ter prihoda. Iz teh podatkov se zgradi tabela točk z absolutnimi časovnimi žigi:
 
 \begin{lstlisting}[caption={Gradnja časovno označene poti vlaka}, label={lst:trainpath}]
-// Izracunaj razdalje med tockami z Haversine formulo
+// Izracunaj razdalje med tockami
 let totalDist = 0;
 const dists = [0];
 for (let i = 1; i < coords.length; i++) {
@@ -366,22 +356,21 @@ for (let i = 1; i < path.length; i++) {
 
 \section{Kartografski prikaz}
 
-\begin{figure}[h!]
-\centering
-\includegraphics[width=1\textwidth]{img/map.png}
-\caption{Zavihek z zemljevidom}
-\label{fig:map}
-\end{figure}
-
 \subsection{Knjižnica MapLibre GL}
 
-Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja tekoče gibanje in visoko zmogljivost celo pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temen (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik. Na sliki 2 je prikazan svetli zemljevid z izrisanimi položaji avtobusov in postajališč.
+Osnova za kartografski prikaz je knjižnica MapLibre GL JS \cite{maplibre}, odprtokodna nadgradnja projekta Mapbox GL JS. Knjižnica za upodabljanje zemljevida uporablja tehnologijo WebGL, kar zagotavlja gladko gibanje in visoko zmogljivost tudi pri prikazu tisočih točk hkrati. Zemljevida sta dva: svetel (OpenStreetMap Raster Light) in temen (OpenStreetMap Raster Dark), med njima pa lahko preklopi uporabnik. Na sliki 2 je prikazan svetli zemljevid z izrisanimi položaji avtobusov in postajališč.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.9\textwidth]{img/map.png}
+\caption{Zavihek z zemljevidom}
+\end{figure}
 
 \subsection{Organizacija slojev karte}
 
 Kartografski prikaz je organiziran v module znotraj mape \texttt{src/tabs/map/}:
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Moduli kartografskega prikaza}
 \begin{tabular}{ll}
@@ -398,7 +387,7 @@ Kartografski prikaz je organiziran v module znotraj mape \texttt{src/tabs/map/}:
 \label{tab:mapmodules}
 \end{table}
 
-Vsaka entiteta na karti je urejena v plast (\textit{layer}), ki je vezana na vir podatkov (\textit{source}) tipa GeoJSON. Avtobusi, postajališča, vlaki in železniške postaje so ločeni sloji, kar omogoča neodvisno vklapljanje in izklapljanje posameznih slojev zemljevida.
+Vsaka entiteta na karti je urejena v plast (\textit{layer}), ki je vezana na vir podatkov (\textit{source}) tipa GeoJSON. Avtobusi, avtobusna postajališča, vlaki in železniške postaje so ločeni sloji, kar omogoča neodvisno vklapljanje in izklapljanje posameznih slojev zemljevida.
 
 \subsection{Gruče postajališč in avtobusov}
 
@@ -408,9 +397,9 @@ Postajališča in avtobusi so pri nižji stopnji povečave prikazani v obliki gr
 
 Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linije s postajišči. Trasa je prikazana kot linijski sloj na vrhu vseh ostalih slojev, postajišča na trasi pa so označena s krogi, ki so barvno usklajeni z barvno shemo prevoznika. Komponenta \texttt{RouteTab} prikaže predal s podrobnostmi o vsakem postajališču, vključno s predvidenimi časi prihodov, kot je prikazano na sliki 3.
 
-\begin{figure}[h!]
+\begin{figure}[tb]
 \centering
-\includegraphics[width=1\textwidth]{img/routa.png}
+\includegraphics[width=0.9\textwidth]{img/routa.png}
 \caption{Prikaz trase izbrane linije na karti}
 \label{fig:map}
 \end{figure}
@@ -419,7 +408,7 @@ Ob izbiri vozila iz kateregakoli zavihka se na karti izriše celotna trasa linij
 
 Frekvenca pridobivanja podatkov o položajih avtobusov je dinamično prilagojena stopnji povečave karte (zoom level):
 
-\begin{table}[h!]
+\begin{table}[H]
 \centering
 \caption{Frekvenca osveževanja glede na stopnjo povečave}
 \begin{tabular}{lll}
@@ -445,24 +434,24 @@ Zavihek \texttt{StationsTab} omogoča iskanje postajališč po imenu in prikaz n
 
 Za zmogljivo prikazovanje dolgih seznamov, ki so pogosto dolgi več tisoč vnosov, je uporabljena tehnika virtualiziranega izrisovanja prek knjižnice \texttt{react-window}. Komponenta \texttt{VariableSizeList} izrisuje samo tiste vrstice, ki so dejansko vidne v pogledu (viewport), kar drastično zmanjša število DOM (Document Object Model) elementov in izboljša zmogljivost.
 
-Priljubljena postajališča so shranjena v \texttt{localStorage} in so dostopna tudi brez omrežne povezave. Razdalja od uporabnika je izračunana z Haversine formulo in prikazana poleg vsakega postajališča.
+Priljubljena postajališča so shranjena v \texttt{localStorage} in so dostopna tudi brez omrežne povezave. Razdalja od uporabnika do postaje je izračunana z Haversine formulo in prikazana poleg vsakega postajališča.
 
-\begin{figure}[h!]
+\begin{figure}[tb]
 \centering
-\includegraphics[width=1\textwidth]{img/postaje.png}
+\includegraphics[width=0.9\textwidth]{img/postaje.png}
 \caption{Seznam postaj}
 \label{fig:map}
 \end{figure}
 
 \subsection{Zavihek Linije}
 
-Zavihek \texttt{LinesTab} prikazuje prihode za izbrano postajališče, ločeno po virih (LPP, IJPP, SŽ), ter seznam vseh aktivnih linij, pridobljenih iz GPS podatkov. Omogoča iskanje linij po imenu in označevanje priljubljenih linij.
+Zavihek \texttt{LinesTab} prikazuje prihode za izbrano postajališče, ločene po virih (LPP, IJPP, SŽ), ter seznam vseh aktivnih linij, pridobljenih iz GPS podatkov. Omogoča iskanje linij po imenu in označevanje priljubljenih linij.
 
 Ob kliku na prihod ali linijo se izvede funkcija \texttt{getTripFromId}, ki pridobi podrobnosti o vožnji in jih posreduje zemljevidu za prikaz trase. Prihodi so prikazani z ETA vrednostjo in absolutnim časom prihoda v formatu HH:mm, kot je prikazano na sliki 5.
 
-\begin{figure}[h!]
+\begin{figure}[tb]
 \centering
-\includegraphics[width=1\textwidth]{img/linije.png}
+\includegraphics[width=0.9\textwidth]{img/linije.png}
 \caption{Prikaz prihodov linij na postajo}
 \label{fig:map}
 \end{figure}
@@ -558,7 +547,7 @@ SŽ API vrača geometrijo poti v kodirani obliki Polyline, ki je algoritem za ko
 
 Rešitev: funkcija \texttt{decodePolylineToPoints} najprej dekodira niz z nastavljenim faktorjem. Če koordinate prve točke padejo izven veljavnega geografskega območja, samodejno preskusi z faktorjem 1e6:
 
-\begin{lstlisting}[caption={Avto-zaznavno dekodiranje Polyline z variabilno natančnostjo}, label={lst:poly}]
+\begin{lstlisting}[caption={Samozaznavno dekodiranje Polyline-a z nastavljivo natančnostjo}, label={lst:poly}]
 export function decodePolylineToPoints(str, precision) {
   if (!str || typeof str !== "string") return [];
   let pts = decodePolylineOnce(str, precision);
